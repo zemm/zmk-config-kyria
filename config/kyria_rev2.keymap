@@ -37,10 +37,10 @@
 // | SHIFT | Z    | X    | C    | V    | B    | NAV    | NUM    |          | FUN    | RALT   | N    | M    | ,    | .    | /    | CTRL |
 //                       | LGUI | LALT | BSPC | LSHIFT | LCTRL  |          | DEL    | SPACE  | RET  | TAB  | RGUI |
 			bindings = <
-	&kp ESC   &kp Q &kp W &kp E    &kp R     &kp T                                                &kp Y   &kp U   &kp I     &kp O   &kp P    &kp BSLH
-	&kp TAB   &kp A &kp S &kp D    &kp F     &kp G                                                &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C    &kp V     &kp B   &mo NAV   &mo NUM         &mo FUN  &kp RALT  &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                      &kp LGUI &kb LALT &kp BSPC &kp LSHFT &kp LCTRL       &kp DEL  &kp SPACE &kp RET &kp TAB &kp RGUI
+	&kp ESC   &kp Q &kp W &kp E    &kp R     &kp T                                                 &kp Y   &kp U   &kp I     &kp O   &kp P    &kp BSLH
+	&kp TAB   &kp A &kp S &kp D    &kp F     &kp G                                                 &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp SQT
+	&kp LSHFT &kp Z &kp X &kp C    &kp V     &kp B    &mo NAV   &mo NUM         &mo FUN  &kp RALT  &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+	                      &kp LGUI &kp LALT  &kp BSPC &kp LSHFT &kp LCTRL       &kp DEL  &kp SPACE &kp RET &kp TAB &kp RGUI
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
