@@ -11,7 +11,7 @@
 
 // Inspired by https://github.com/yannickjmt/zmk-config/blob/master/config/kyria.keymap
 
-#define BASE 0
+#define DEF 0
 #define NUM 1
 #define NAV 2
 #define FUN 3
@@ -31,67 +31,49 @@
 		compatible = "zmk,keymap";
 
 		default_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// | ESC   | Q    | W    | E    | R    | T    |                                              | Y    | U    | I    | O    | P    | \    |
-// | TAB   | A    | S    | D    | F    | G    |                                              | H    | J    | K    | L    | ;    | '    |
-// | SHIFT | Z    | X    | C    | V    | B    | NAV    | NUM    |          | FUN    | RALT   | N    | M    | ,    | .    | /    | CTRL |
-//                       | LGUI | LALT | BSPC | LSHIFT | LCTRL  |          | DEL    | SPACE  | RET  | TAB  | RGUI |
+//	---------------------------------------------------------------------------------------------------------------------------------
+//	| ??? | Q   | W   | E   | R   | T   |                             | Y   | U   | I   | O   | P   | -   |
+//	| ??? | A   | S   | D   | F   | G   |                             | H   | J   | K   | L   | ;   | '   |
+//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | \   |
+//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
-	&kp ESC   &kp Q &kp W &kp E    &kp R     &kp T                                                 &kp Y   &kp U   &kp I     &kp O   &kp P    &kp BSLH
-	&kp TAB   &kp A &kp S &kp D    &kp F     &kp G                                                 &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C    &kp V     &kp B    &mo NAV   &mo NUM         &mo FUN  &kp RALT  &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                      &kp LGUI &kp LALT  &kp BSPC &kp LSHFT &kp LCTRL       &kp DEL  &kp SPACE &kp RET &kp TAB &kp RGUI
+	&kp ESC  &kp Q &kp W &kp E    &kp R    &kp T                                                 &kp Y    &kp U   &kp I     &kp O   &kp P    &kp MINUS
+	&kp BSPC &kp A &kp S &kp D    &kp F    &kp G                                                 &kp H    &kp J   &kp K     &kp L   &kp SEMI &kp SQT
+	&kp TAB  &kp Z &kp X &kp C    &kp V    &kp B    &mo NAV   &to NUM    &to NAV       &mo NUM   &kp N    &kp M   &kp COMMA &kp DOT &kp FSLH &kp BSLH
+	                     &kp LGUI &to FUN  &kp LALT &kp LSHFT &kp LCTRL  &mt RCTRL RET &kp SPACE &kp RALT &to NAV &kp RGUI
 			>;
-
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 		};
 
 		num_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// | `     | !    | +    | [     | ]     | =     |                                          | %    | 7    | 8    | 9    | *    | /    |
-// | #     | @    | _    | (     | )     | -     |                                          | $    | 4    | 5    | 6    | +    | ---  |
-// | ~     | \    | &    | {     | }     | |     | ---   | ---   |  | ---   | ---   | ^     | 1    | 2    | 3    | -    | ---  |
-//                       | ENC   | ---   | ---   | ---   | ---   |  | ---   | ---   | ---   | ---  | ---  |
+//	---------------------------------------------------------------------------------------------------------------------------------
+//	| `   | !   | +   | [   | ]   | =   |                             | ^   | 7   | 8   | 9   | *   | /   |
+//	| #   | @   | _   | (   | )   | -   |                             | %   | 4   | 5   | 6   | +   | #   |
+//	| ~   | \   | &   | {   | }   | |   | --- | --- |     | --- | --- | $   | 1   | 2   | 3   | -   | --- |
+//	                  | --- | --- | --- | --- | --- |     | --- | 0   | .   | ,   | --- |
 			bindings = <
-	&kp GRAVE &kp EXCL &kp PLUS  &kp LBKT &kp RBKT &kp EQUAL                                &kp CARET &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY &kp KP_DIVIDE
-	&kp HASH  &kp AT   &kp UNDER &kp LPAR &kp RPAR &kp MINUS                                &kp PRCNT &kp N4  &kp N5  &kp N6  &kp KP_PLUS     &none
-	&kp TILDE &kp BSLH &kp AMPS  &kp LBRC &kp RBRC &kp PIPE  &trans &trans    &trans &trans &kp DLLR  &kp N1  &kp N2  &kp N3  &kp KP_MINUS    &trans
-	                             &trans   &trans   &trans    &trans &trans    &trans &trans &kp N0    &kp DOT &trans
+	&kp GRAVE &kp EXCL &kp PLUS  &kp LBKT &kp RBKT &kp EQUAL                               &kp CARET &kp N7  &kp N8  &kp N9  &kp KP_MULTIPLY &kp KP_DIVIDE
+	&kp HASH  &kp AT   &kp UNDER &kp LPAR &kp RPAR &kp MINUS                               &kp PRCNT &kp N4  &kp N5  &kp N6  &kp KP_PLUS     &kp HASH
+	&kp TILDE &kp BSLH &kp AMPS  &kp LBRC &kp RBRC &kp PIPE  &trans &trans  &trans &to DEF &kp DLLR  &kp N1  &kp N2  &kp N3  &kp KP_MINUS    &none
+	                             &trans   &trans   &trans    &trans &trans  &trans &kp N0  &kp DOT   &kp COMMA &trans
 			>;
-
-			sensor-bindings = <&inc_dec_kp LC(LEFT) LC(RIGHT)>;
 		};
 
 		nav_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// | ---  | Tab-| Tab+| win+ | win- | excel|                                          | Pgup | Home |  Up   | End  | ScrUp | ---  |
-// | ---  | Win | Shft| alt  | ctrl | app  |                                          | Pgdw | Left |  Down | Right| ScrDn | ---  |
-// | ---  | --- | F2  | F3   | F5   | excel|   ---   |  ---    |  |   ---   |  ---    |      | Predk| ---   | NxDk |   -   |---   |
-//                    | ENC  | ---  | ---  |   ---   |  ---    |  |   ---   |  ---    | ---  | ---  | ---   |
 			bindings = <
-	&trans &kp PTAB &kp NTAB  &kp PWIN &kp NWIN  &trans                                   &kp PG_UP &kp HOME  &kp UP   &kp END   &kp K_SCROLL_UP &trans
-	&trans &kp LGUI &kp LSHFT &kp LALT &kp LCTRL &kp K_APP                                &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp K_SCROLL_DOWN &trans
-	&trans &trans   &kp F2    &kp F3   &kp F5    &kp XSLV  &trans &trans    &trans &trans &trans    &kp NDESK &trans   &kp PDESK &trans &trans
-	                          &trans   &trans    &trans    &trans &trans    &trans &trans &trans    &none     &trans
+	&trans &kp PTAB &kp NTAB  &kp PWIN &kp NWIN  &none                                   &kp PG_UP &kp HOME  &kp UP   &kp END   &kp K_SCROLL_UP   &none
+	&trans &kp LGUI &kp LSHFT &kp LALT &kp LCTRL &kp K_APP                               &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp K_SCROLL_DOWN &none
+	&trans &none    &kp F2    &kp LEFT &kp RIGHT &kp XSLV  &trans &trans  &trans &to DEF &none     &kp UP    &kp DOWN &kp NDESK &kp PDESK         &none
+	                          &trans   &trans    &trans    &trans &trans  &trans &trans  &trans    &trans    &trans
 			>;
-
-			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP>;
 		};
 
 		function_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// | none  |  F2 | mute| V+   | stp  |   @  |                                       | F12  |  F7   |  F8   |  F9  | Print| none |
-// | none  | caps| Prev| V-   | Next |   @p |                                       | F11  |  F4   |  F5   |  F6  | Ins  | none |
-// | none  | /Ble| Ble0| Ble1 | Ble2 | Ble3 |  Ble4  |  ---    |  |   ---   |  ---  | F10  |  F1   |  F2   |  F3  | ---  | none |
-//                     | ---  | ---  | ---  |  ---   |  ---    |  |   ---   |  ---  | ---  | ---   | ---   |
 			bindings = <
-	&trans &kp F2     &kp C_MUTE   &kp C_VOL_UP &kp C_STOP   &none                                                &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN &trans
-	&trans &kp CAPS   &kp C_PREV   &kp C_VOL_DN &kp C_NEXT   &none                                                &kp F11 &kp F4 &kp F5 &kp F6 &kp INS  &trans
-	&trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &out OUT_TOG  &none  &none &kp F10 &kp F1 &kp F2 &kp F3 &trans   &trans
-	                         &trans        &trans        &trans           &trans       &trans        &trans &trans &trans &trans &trans
+	&trans &kp F2     &kp C_MUTE   &kp C_VOL_UP &kp C_STOP   &none                                                  &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN &trans
+	&trans &kp CAPS   &kp C_PREV   &kp C_VOL_DN &kp C_NEXT   &none                                                  &kp F11 &kp F4 &kp F5 &kp F6 &kp INS  &trans
+	&trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &out OUT_TOG  &none  &to DEF &kp F10 &kp F1 &kp F2 &kp F3 &trans   &trans
+	                               &trans       &trans       &trans       &trans       &trans        &trans &trans  &trans  &trans &trans
 			>;
-
-			sensor-bindings = <&inc_dec_cp C_VOL_DN C_VOL_UP>;
 		};
 	};
 };
