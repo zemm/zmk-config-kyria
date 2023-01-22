@@ -120,10 +120,10 @@
 
 		right_mods_layer {
 			bindings = <
-	&trans &trans &trans &trans &trans &trans                                &none    &none    &none    &none     &none &none
-	&trans &trans &trans &trans &trans &trans                                &kp RCTL &kp LALT &kp RGUI &kp RSHFT &none &none
-	&trans &trans &trans &trans &trans &trans &trans &trans    &none &to DEF &none    &none    &none    &none     &none &none
-	                     &trans &trans &trans &trans &trans    &none &none   &none    &none    &none
+	&trans &trans &trans &trans &trans &trans                                &none &none    &none    &none    &none     &none
+	&trans &trans &trans &trans &trans &trans                                &none &kp RCTL &kp LALT &kp RGUI &kp RSHFT &none
+	&trans &trans &trans &trans &trans &trans &trans &trans    &none &to DEF &none &none    &none    &none    &none     &none
+	                     &trans &trans &trans &trans &trans    &none &none   &none &none    &none
 			>;
 		};
 	};
