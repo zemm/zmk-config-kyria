@@ -46,8 +46,8 @@
 			bindings = <
 	&kp ESC  &kp Q  &kp W  &kp E       &kp R   &kp T                                                     &kp Y   &kp U   &kp I     &kp O   &kp P    &kp MINUS
 	&kp BSPC &kp A  &kp S  &kp D       &kp F   &kp G                                                     &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-	&kp TAB  &kp Z  &kp X  &kp C       &kp V   &kp B       &mo SYM SYM &mo NUM NUM    &none    &kp RALT  &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &kp BSLH
-	                       &mo FUN FUN &none   &mo NAV NAV &kp LSHFT   &mo LMD        &mo RMD  &kp SPACE &kp RET &none   &mo FUN FUN
+	&kp TAB  &kp Z  &kp X  &kp C       &kp V   &kp B       &mo SYM     &mo NUM        &none    &kp RALT  &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &kp BSLH
+	                       &mo FUN     &none   &mo NAV     &kp LSHFT   &mo LMD        &mo RMD  &kp SPACE &kp RET &none   &mo FUN
 			>;
 		};
 
