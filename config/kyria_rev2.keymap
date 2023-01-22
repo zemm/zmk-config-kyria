@@ -34,6 +34,17 @@
 #define KP_DIV KP_DIVIDE
 
 / {
+	behaviors {
+		lx: behavior_layer_momentary_to {
+			compatible = "zmk,behavior-hold-tap";
+			label = "LAYER_MOMENTARY_TO";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <200>;
+			bindings = <&mo>, <&to>;
+		};
+	};
+
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -46,8 +57,8 @@
 			bindings = <
 	&kp ESC  &kp Q  &kp W  &kp E       &kp R   &kp T                                                     &kp Y   &kp U   &kp I     &kp O   &kp P    &kp MINUS
 	&kp BSPC &kp A  &kp S  &kp D       &kp F   &kp G                                                     &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-	&kp TAB  &kp Z  &kp X  &kp C       &kp V   &kp B       &mo SYM     &mo NUM        &none    &kp RALT  &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &kp BSLH
-	                       &mo FUN     &none   &mo NAV     &kp LSHFT   &mo LMD        &mo RMD  &kp SPACE &kp RET &none   &mo FUN
+	&kp TAB  &kp Z  &kp X  &kp C       &kp V   &kp B       &lx SYM SYM &lx NUM NUM    &none    &kp RALT  &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &kp BSLH
+	                       &lx FUN FUN &none   &lx NAV NAV &kp LSHFT   &mo LMD        &mo RMD  &kp SPACE &kp RET &none   &lx FUN FUN
 			>;
 		};
 
