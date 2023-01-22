@@ -30,7 +30,6 @@
 #define LR_DOWN LA(DOWN)
 #define LR_UP LA(UP)
 
-#define EURO RA(&kp N5)
 #define KP_MULT KP_MULTIPLY
 #define KP_DIV KP_DIVIDE
 
@@ -75,7 +74,7 @@
 //	                  | --- | --- | --- | --- | --- |     | --- | 0   | KP, | RET | KP= |
 			bindings = <
 	&none    &none    &none    &kp LBKT &kp RBKT &kp EQUAL                                   &kp KP_NLCK  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp CARET    &kp DOLLAR
-	&none    &none    &none    &kp LPAR &kp RPAR &kp UNDER                                   &kp KP_MULT  &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &kp EURO
+	&none    &none    &none    &kp LPAR &kp RPAR &kp UNDER                                   &kp KP_MULT  &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &kp HASH
 	&none    &none    &none    &kp LBRC &kp RBRC &kp PIPE  &trans &trans    &trans &to DEF   &kp KP_DIV   &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_MINUS &kp PRCNT
 	                           &trans   &trans   &trans    &trans &trans    &trans &kp KP_N0 &kp KP_COMMA &kp KP_ENTER &kp KP_EQUAL
 			>;
