@@ -67,7 +67,7 @@
 	&kp ESC     &kp Q  &kp W   &kp E   &kp R   &kp T                                             &kp Y  &kp U   &kp I     &kp O   &kp P    &kp TAB
 	&kp BSPC    &kp A  &kp S   &kp D   &kp F   &kp G                                             &kp H  &kp J   &kp K     &kp L   &kp SEMI &mt RSHFT SQT
 	&kp LCTRL   &kp Z  &kp X   &kp C   &kp V   &kp B    &mo LSHFT &mo NUM    &kp RCTRL &kp RALT  &kp N  &kp M   &kp COMMA &kp DOT &kp FSLH &mt RCTRL BSLH
-	                           &mo FUN &kp ESC &mo NUM  &mo NAV   &mo KPD    &kp RET   &kp SPACE &none  &kp ESC &to NAV
+	                           &mo FUN &none   &mo SYM  &mo NAV   &mo KPD    &kp RET   &kp SPACE &none  &to NAV &mo FUN
 			>;
 		};
 
@@ -101,7 +101,7 @@
 
 		navigation_layer {
 			bindings = <
-	&trans   &kp BSPC  &kp NTAB  &kp PWIN   &kp NWIN    &none                                     &kp INS   &kp HOME  &kp UP   &kp END   &kp PG_UP  &kp K_SCROLL_UP
+	&trans   &kp PTAB  &kp NTAB  &kp PWIN   &kp NWIN    &none                                     &kp INS   &kp HOME  &kp UP   &kp END   &kp PG_UP  &kp K_SCROLL_UP
 	&trans   &kp LMO4  &kp LMO3  &kp LMO2   &kp LMO1    &kp K_APP                                 &kp BSPC  &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN  &kp K_SCROLL_DOWN
 	&trans   &kp F2    &kp K_CUT &kp K_COPY &kp K_PASTE &kp XSLV  &trans &trans    &trans &to DEF &kp DEL   &kp UP    &kp DOWN &kp NDESK &kp PDESK  &none
 	                             &trans     &trans      &trans    &trans &trans    &trans &trans  &trans    &trans    &trans
