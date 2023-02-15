@@ -11,21 +11,15 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define DEF 0
-#define SYM 1
+#define NAV 1
 #define NUM 2
-#define NAV 3
+#define SYM 3
 #define KPD 4
 #define FUN 5
+#define LMOD 6
+#define RMOD 7
 
-#define PTAB LC(PG_UP)
-#define NTAB LC(PG_DN)
-#define NWIN LA(TAB)
-#define PWIN LS(LA(TAB))
 #define XSLV LA(LC(V))
-#define PDESK LC(LG(RIGHT))
-#define NDESK LC(LG(LEFT))
-#define LR_DOWN LA(DOWN)
-#define LR_UP LA(UP)
 
 // Modifiers for left/right side fingers: 4=little 3=ring 2=middle 1=index
 #define LMO4 LSHFT
@@ -64,71 +58,88 @@
 //	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | \   |
 //	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
-	&kp ESC     &kp Q  &kp W   &kp E   &kp R   &kp T                                             &kp Y  &kp U   &kp I     &kp O   &kp P    &kp TAB
-	&kp BSPC    &kp A  &kp S   &kp D   &kp F   &kp G                                             &kp H  &kp J   &kp K     &kp L   &kp SEMI &mt RSHFT SQT
-	&kp LCTRL   &kp Z  &kp X   &kp C   &kp V   &kp B    &mo LSHFT &mo NUM    &kp RCTRL &kp RALT  &kp N  &kp M   &kp COMMA &kp DOT &kp FSLH &mt RCTRL BSLH
-	                           &mo FUN &kp ESC &mo NUM  &mo NAV   &mo KPD    &kp RET   &kp SPACE &none  &kp ESC &to NAV
-			>;
-		};
-
-		symbol_layer {
-//	---------------------------------------------------------------------------------------------------------------------------------
-//	| `   | !   | @   | #   | $   | %   |                             | ^   | &   | *   | (   | )   | =   |
-//	|     | XXX | XXX | XXX | XXX |     |                             | -   | XXX | XXX | XXX | XXX | +   |
-//	| ~   | [   | ]   | LEFT| RIGH|     | --- | --- |     | --- | --- | _   | UP  | DOWN| {   | }   | -   |
-//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
-			bindings = <
-	&kp GRAVE  &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                                 &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp EQUAL
-	&trans     &kp LMO4   &kp LMO3  &kp LMO2  &kp LMO1  &none                                     &kp MINUS  &kp RMO1  &kp RMO2  &kp RMO3  &kp RMO4  &kp PLUS
-	&kp TILDE  &kp LBKT   &kp RBKT  &kp LEFT  &kp RIGHT &none     &trans &trans    &trans &to DEF &kp UNDER  &kp UP    &kp DOWN  &kp LBRC  &kp RBRC  &kp MINUS
-	                                &trans    &trans    &trans    &trans &trans    &trans &trans  &trans     &trans         &trans
-			>;
-		};
-
-		number_layer {
-//	---------------------------------------------------------------------------------------------------------------------------------
-//	| `   | 1   | 2   | 3   | 4   | 5   |                             | 6   | 7   | 8   | 9   | 0   | $   |
-//	|     | XXX | XXX | XXX | XXX | %   |                             | ^   | XXX | XXX | XXX | XXX | €   |
-//	| ~   | [   | ]   | LEFT| RIGH|     | --- | --- |     | --- | --- | _   | UP  | DOWN| {   | }   | -   |
-//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
-			bindings = <
-	&kp GRAVE &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                                   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp EQUAL
-	&trans    &kp LMO4   &kp LMO3  &kp LMO2  &kp LMO1  &none                                    &kp CARET &kp RMO1  &kp RMO2  &kp RMO3  &kp RMO4  &kp PLUS
-	&kp TILDE &kp LBKT   &kp RBKT  &kp LEFT  &kp RIGHT &none    &trans &trans    &trans &to DEF &kp UNDER &kp UP    &kp DOWN  &kp LBRC  &kp RBRC  &kp MINUS
-	                               &trans    &trans    &trans   &trans &trans    &trans &trans  &trans    &trans    &trans
+	&kp ESC     &kp Q  &kp W   &kp E   &kp R   &kp T                                             &kp Y  &kp U   &kp I     &kp O   &kp P    &kp MINUS
+	&kp BSPC    &kp A  &kp S   &kp D   &kp F   &kp G                                             &kp H  &kp J   &kp K     &kp L   &kp SEMI &kp SQT
+	&kp LCTRL   &kp Z  &kp X   &kp C   &kp V   &kp B    &mo LSHFT &mo NUM    &kp RCTRL &kp RALT  &kp N  &kp M   &kp COMMA &kp DOT &kp FSLH &kp BSLH
+	                           &mo FUN &kp ESC &mo LMOD &mo NAV   &mo KPD    &kp RET   &kp SPACE &none  &kp ESC &to NAV
 			>;
 		};
 
 		navigation_layer {
 			bindings = <
-	&trans   &kp BSPC  &kp NTAB  &kp PWIN   &kp NWIN    &none                                     &kp INS   &kp HOME  &kp UP   &kp END   &kp PG_UP  &kp K_SCROLL_UP
-	&trans   &kp LMO4  &kp LMO3  &kp LMO2   &kp LMO1    &kp K_APP                                 &kp BSPC  &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN  &kp K_SCROLL_DOWN
-	&trans   &kp F2    &kp K_CUT &kp K_COPY &kp K_PASTE &kp XSLV  &trans &trans    &trans &to DEF &kp DEL   &kp UP    &kp DOWN &kp NDESK &kp PDESK  &none
-	                             &trans     &trans      &trans    &trans &trans    &trans &trans  &trans    &trans    &trans
+	&trans   &kp BSPC  &none     &kp LS(TAB) &kp TAB     &none                                     &kp INS   &kp HOME  &kp UP   &kp END   &kp PG_UP  &kp K_SCROLL_UP
+	&trans   &kp LMO4  &kp LMO3  &kp LMO2    &kp LMO1    &kp K_APP                                 &kp BSPC  &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN  &kp K_SCROLL_DOWN
+	&trans   &kp F2    &kp K_CUT &kp K_COPY  &kp K_PASTE &kp XSLV  &trans &trans    &trans &to DEF &kp DEL   &kp UP    &kp DOWN &none     &none      &none
+	                             &trans      &trans      &trans    &trans &trans    &trans &trans  &trans    &trans    &trans
+			>;
+		};
+
+		number_layer {
+//	---------------------------------------------------------------------------------------------------------------------------------
+//	| `   |     | (   | )   |     |     |                             | 6   | 7   | 8   | 9   | =   | `   |
+//	|     | XXX | XXX | XXX | XXX |     |                             | ^   | 4   | 5   | 6   | +   | +   |
+//	| ~   | [   | {   | }   | ]   |     | --- | --- |     | --- | --- | _   | 1   | 2   | 3   | -   | -   |
+//	                  | --- | --- | --- | --- | --- |     | --- | --- | 0   | --- | --- |
+			bindings = <
+	&trans  &kp BSPC  &kp LPAR  &kp RPAR  &none     &none                                    &kp N6    &kp N7  &kp N8  &kp N9  &kp EQUAL &kp GRAVE
+	&trans  &kp LMO4  &kp LMO3  &kp LMO2  &kp LMO1  &none                                    &kp CARET &kp N4  &kp N5  &kp N6  &kp PLUS  &trans
+	&trans  &kp LBKT  &kp RBRC  &kp RBRC  &kp RBKT  &none    &trans &trans    &trans &to DEF &kp UNDER &kp N1  &kp N2  &kp N3  &kp MINUS &trans
+	                            &trans    &trans    &trans   &trans &trans    &trans &trans  &kp N0    &trans  &trans
+			>;
+		};
+
+		symbol_layer {
+//	---------------------------------------------------------------------------------------------------------------------------------
+//	|     |     | (   | )   |     |     |                             | (   | &   | *   | +   | )   | ~   |
+//	|     | XXX | XXX | XXX | XXX |     |                             | {   | $   | %   | ^   | }   |     |
+//	|     | [   | {   | }   | ]   |     | --- | --- |     | --- | --- | [   | !   | @   | #   | ]   |     |
+//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
+			bindings = <
+	&trans  &kp BSPC  &kp LPAR  &kp RPAR  &none     &kp PRCNT                                 &kp LPAR   &kp AMPS  &kp STAR  &kp TILDE &kp RPAR  &kp TILDE
+	&trans  &kp LMO4  &kp LMO3  &kp LMO2  &kp LMO1  &none                                     &kp LBRC   &kp DLLR  &kp PRCNT &kp CARET &kp RBRC  &trans
+	&trans  &kp LBKT  &kp RBRC  &kp RBRC  &kp RBKT  &none     &trans &trans    &trans &to DEF &kp LBKT   &kp EXCL  &kp AT    &kp HASH  &kp RBKT  &trans
+	                            &trans    &trans    &trans    &trans &trans    &trans &trans  &trans     &trans         &trans
 			>;
 		};
 
 		keypad_layer {
-// @TODO: left side completely
 //	---------------------------------------------------------------------------------------------------------------------------------
-//	|     | (   | [   | ]   | )   |     |                             | NML | 7   | 8   | 9   | ^   | KP= |
+//	|     |     | (   | )   | =   |     |                             | NML | 7   | 8   | 9   | ^   | KP= |
 //	|     | XXX | XXX | XXX | XXX |     |                             | *   | 4   | 5   | 6   | +   | #   |
-//	|     | {   |     | =   | }   |     | --- | --- |     | --- | --- | /   | 1   | 2   | 3   | -   | %   |
+//	|     | [   | {   | }   | ]   |     | --- | --- |     | --- | --- | /   | 1   | 2   | 3   | -   | %   |
 //	                  | --- | --- | --- | --- | --- |     | --- | 0   | KP, | RET | CAL |
 			bindings = <
-	&trans  &kp LPAR  &kp LBKT  &kp RBKT  &kp RPAR  &none                                     &kp KP_NLCK  &kp KP_N7    &kp KP_N8 &kp KP_N9 &kp CARET    &kp KP_EQUAL
-	&trans  &kp LMO4  &kp LMO3  &kp LMO2  &kp LMO1  &none                                     &kp KP_MULT  &kp KP_N4    &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &kp HASH
-	&trans  &kp LBRC  &none     &kp EQUAL &kp RBRC  &none   &trans &trans    &trans &to DEF   &kp KP_DIV   &kp KP_N1    &kp KP_N2 &kp KP_N3 &kp KP_MINUS &kp PRCNT
-	                            &trans    &trans    &trans  &trans &trans    &trans &kp KP_N0 &kp KP_COMMA &kp KP_ENTER &kp C_AL_CALCULATOR
+	&trans  &kp BSPC  &kp LPAR  &kp RPAR  &kp EQUAL &none                                          &kp KP_NLCK  &kp KP_N7    &kp KP_N8 &kp KP_N9 &kp CARET    &kp C_AL_CALCULATOR
+	&trans  &kp LMO4  &kp LMO3  &kp LMO2  &kp LMO1  &none                                          &kp KP_MULT  &kp KP_N4    &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &kp HASH
+	&trans  &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT  &none   &trans &trans    &trans       &to DEF  &kp KP_DIV   &kp KP_N1    &kp KP_N2 &kp KP_N3 &kp KP_MINUS &kp PRCNT
+	                            &trans    &trans    &trans  &trans &trans    &kp KP_ENTER &trans   &kp KP_N0    &kp KP_COMMA &kp KP_EQUAL
 			>;
 		};
 
 		function_layer {
 			bindings = <
-	&bt BT_SEL 0 &kp F2       &kp C_MUTE   &kp C_VOL_UP &kp C_STOP &out OUT_TOG                                 &kp F12 &kp F7 &kp F8 &kp F9 &rgb_ug RGB_EFF &rgb_ug RGB_TOG
-	&bt BT_SEL 1 &kp CAPS     &kp C_PREV   &kp C_VOL_DN &kp C_NEXT &none                                        &kp F11 &kp F4 &kp F5 &kp F6 &rgb_ug RGB_HUI &rgb_ug RGB_BRI
-	&bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp PSCRN    &kp INS    &bt BT_CLR   &trans &trans    &trans &to DEF &kp F10 &kp F1 &kp F2 &kp F3 &rgb_ug RGB_HUD &rgb_ug RGB_BRD
-	                                       &trans       &trans     &trans       &trans &trans    &trans &trans  &trans  &trans &trans
+	&bt BT_SEL 0 &kp C_MUTE   &kp C_VOL_UP &kp C_VOL_DN &kp C_PREV &out C_NEXT                                    &kp F12 &kp F7 &kp F8 &kp F9 &rgb_ug RGB_EFF &rgb_ug RGB_TOG
+	&bt BT_SEL 1 &kp LM04     &kp LM03     &kp LM02     &kp LM01   &out C_STOP                                    &kp F11 &kp F4 &kp F5 &kp F6 &rgb_ug RGB_HUI &rgb_ug RGB_BRI
+	&bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp PSCRN    &kp INS    &out OUT_TOG &trans &bt BT_CLR  &trans &to DEF &kp F10 &kp F1 &kp F2 &kp F3 &rgb_ug RGB_HUD &rgb_ug RGB_BRD
+	                                       &trans       &trans     &trans       &trans &kp CAPS    &trans &trans  &trans  &trans &trans
+			>;
+		};
+
+		left_modifier_layer {
+			bindings = <
+	&trans  &trans    &trans    &kp LS(TAB) &kp TAB   &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
+	&trans  &kp LMO4  &kp LMO3  &kp LMO2    &kp LMO1  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
+	&trans  &sk LMO4  &sk LM03  &sk LMO2    &sk LM01  &trans  &trans  &trans    &trans  &to DEF  &trans  &trans  &trans  &trans  &trans  &trans
+	                            &trans      &trans    &trans  &trans  &trans    &trans  &trans   &trans  &trans  &trans
+			>;
+		};
+
+		right_modifier_layer {
+			bindings = <
+	&trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans    &trans    &trans    &trans    &trans
+	&trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &kp RMO4  &kp RMO3  &kp RMO2  &kp RMO1  &trans
+	&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &to DEF  &trans  &sk RMO4  &sk RMO3  &sk RMO2  &sk RMO1  &trans
+	                        &trans  &trans  &trans  &trans  &trans    &trans  &trans   &trans  &trans    &trans
 			>;
 		};
 	};
