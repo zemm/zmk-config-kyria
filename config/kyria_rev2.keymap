@@ -64,7 +64,7 @@
 
 		navigation_layer {
 			bindings = <
-	&trans   &kp BSPC  &kp INS   &kp LS(TAB) &kp TAB     &kp K_CUT                                    &kb TAB   &kp PG_UP   &kp UP     &kp PG_DN  &none    &none
+	&trans   &kp BSPC  &kp INS   &kp LS(TAB) &kp TAB     &kp K_CUT                                    &kp TAB   &kp PG_UP   &kp UP     &kp PG_DN  &none    &none
 	&trans   &kp LMO4  &kp LMO3  &kp LMO2    &kp LMO1    &kp K_COPY                                   &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END  &none
 	&trans   &kp F2    &kp BSPC  &none       &kp DEL     &kp X_PASTA  &trans &trans    &trans &to DEF &none     &kp BSPC    &none      &kp DEL    &none    &none
 	                             &trans      &trans      &trans       &trans &trans    &trans &trans  &trans    &trans      &trans
