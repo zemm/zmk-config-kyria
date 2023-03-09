@@ -41,14 +41,14 @@
 
 #define COMBO_ALL(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <10>; \
+    timeout-ms = <15>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
   }
 
-#define COMBO_L0(NAME, BINDINGS, KEYPOS) \
+#define COMBO_LAYER0(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <10>; \
+    timeout-ms = <15>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <0>; \
@@ -72,12 +72,12 @@
 		COMBO_ALL(enter, &kp ENTER, 37 38);
 		COMBO_ALL(bspc, &kp BSPC, 13 14);
 
-		COMBO_L0(rctrl, &kp RCTRL, 35 36);
-		COMBO_L0(rlalt, &kp LALT, 35 37);
-		COMBO_L0(rgui, &kp RGUI, 35 38);
-		COMBO_L0(lctrl, &kp LCTRL, 27 28);
-		COMBO_L0(lalt, &kp LALT, 26 28);
-		COMBO_L0(lgui, &kp LGUI, 25 28);
+		COMBO_LAYER0(lctrl, &kp LCTRL, 27 28);
+		COMBO_LAYER0(lalt, &kp LALT, 26 28);
+		COMBO_LAYER0(lgui, &kp LGUI, 25 28);
+		COMBO_LAYER0(rctrl, &kp RCTRL, 35 36);
+		COMBO_LAYER0(rlalt, &kp LALT, 35 37);
+		COMBO_LAYER0(rgui, &kp RGUI, 35 38);
 	};
 
 	keymap {
@@ -102,7 +102,7 @@
 	&trans   &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp K_CUT                                    &kp INS   &kp PG_UP   &kp UP     &kp PG_DN  &kp TAB    &none
 	&trans   &kp LMO4  &kp LMO3  &kp LMO2    &kp LMO1  &kp K_COPY                                   &kp BSPC  &kp LEFT    &kp DOWN   &kp RIGHT  &none      &none
 	&trans   &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp X_PASTA  &trans &trans    &trans &to DEF &none     &kp HOME    &none      &kp END    &kp ENTER  &none
-	                             &trans      &trans    &trans       &trans &trans    &trans &trans  &trans    &trans      &trans
+	                             &trans      &trans    &trans       &trans &trans    &trans &trans  &mo NUM   &trans      &trans
 			>;
 		};
 
