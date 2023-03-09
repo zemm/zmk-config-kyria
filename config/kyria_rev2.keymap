@@ -16,8 +16,6 @@
 #define SYM 3
 #define FUN 4
 #define KPD 5
-#define LMOD 6
-#define RMOD 7
 
 #define X_UNDO LC(Z)
 #define X_REDO LC(LS(Z))
@@ -161,24 +159,6 @@
 	&trans  &kp LMO4  &kp LMO3  &kp LMO2  &kp LMO1  &none                                          &kp KP_MULT  &kp KP_N4    &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &kp HASH
 	&trans  &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT  &none   &trans &trans    &trans       &to DEF  &kp KP_DIV   &kp KP_N1    &kp KP_N2 &kp KP_N3 &kp KP_MINUS &kp PRCNT
 	                            &trans    &trans    &trans  &trans &trans    &kp KP_ENTER &trans   &kp KP_N0    &kp KP_COMMA &kp KP_EQUAL
-			>;
-		};
-
-		left_modifier_layer {
-			bindings = <
-	&trans  &trans    &trans    &kp LS(TAB) &kp TAB   &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
-	&trans  &kp LMO4  &kp LMO3  &kp LMO2    &kp LMO1  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
-	&trans  &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &trans  &trans  &trans    &trans  &to DEF  &trans  &trans  &trans  &trans  &trans  &trans
-	                            &trans      &trans    &trans  &trans  &trans    &trans  &trans   &trans  &trans  &trans
-			>;
-		};
-
-		right_modifier_layer {
-			bindings = <
-	&trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans    &trans    &trans    &trans    &trans
-	&trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &kp RMO4  &kp RMO3  &kp RMO2  &kp RMO1  &trans
-	&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &to DEF  &trans  &sk RMO4  &sk RMO3  &sk RMO2  &sk RMO1  &trans
-	                        &trans  &trans  &trans  &trans  &trans    &trans  &trans   &trans  &trans    &trans
 			>;
 		};
 	};
