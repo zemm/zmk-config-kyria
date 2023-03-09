@@ -95,17 +95,17 @@
 			bindings = <
 	&mt LALT ESC  &kp Q  &kp W  &kp E   &kp R    &kp T                                                  &kp Y    &kp U     &kp I     &kp O   &kp P    &kp MINUS
 	&kp BSPC      &kp A  &kp S  &kp D   &kp F    &kp G                                                  &kp H    &kp J     &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LCTRL     &kp Z  &kp X  &kp C   &kp V    &kp B      &none     &mo SYM    &to KPD     &none      &kp N    &kp M     &kp COMMA &kp DOT &kp FSLH &kp BSLH
+	&kp LCTRL     &kp Z  &kp X  &kp C   &kp V    &kp B      &kp LCTRL &mo SYM    &to KPD     &none      &kp N    &kp M     &kp COMMA &kp DOT &kp FSLH &kp BSLH
 	                            &mo FUN &none    &kp LSHFT  &mo NAV   &mo NUM    &lt SYM RET &kp SPACE  &kp RALT &none     &none
 			>;
 		};
 
 		navigation_layer {
 			bindings = <
-	&trans   &kp BSPC  &kp LS(TAB) &kp TAB   &none     &none                                    &kp INS   &kp PG_UP   &kp UP     &kp PG_DN  &kp TAB     &none
-	&trans   &kp LMO4  &kp LMO3    &kp LMO2  &kp LMO1  &none                                    &kp BSPC  &kp LEFT    &kp DOWN   &kp RIGHT  &kp ENTER   &none
-	&trans   &sk LMO4  &sk LMO3    &sk LMO2  &sk LMO1  &none    &trans &trans    &trans &to DEF &kp K_CUT &kp HOME    &kp K_COPY &kp END    &kp X_PASTA &none
-	                               &trans    &trans    &trans   &trans &trans    &trans &trans  &trans    &trans      &trans
+	&trans   &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &none                                    &kp INS   &kp PG_UP   &kp UP     &kp PG_DN  &kp TAB     &none
+	&trans   &kp LMO4  &kp LMO3  &kp LMO2    &kp LMO1  &none                                    &kp BSPC  &kp LEFT    &kp DOWN   &kp RIGHT  &kp ENTER   &none
+	&trans   &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &none    &trans &trans    &trans &to DEF &kp K_CUT &kp HOME    &kp K_COPY &kp END    &kp X_PASTA &none
+	                             &trans      &trans    &trans   &trans &trans    &trans &trans  &trans    &trans      &trans
 			>;
 		};
 
