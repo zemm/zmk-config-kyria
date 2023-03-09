@@ -41,15 +41,14 @@
 
 #define COMBO_ALL(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <30>; \
+    timeout-ms = <10>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
-    layers = <0>; \
   }
 
 #define COMBO_L0(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <30>; \
+    timeout-ms = <10>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <0>; \
@@ -70,7 +69,7 @@
 
 		COMBO_ALL(esc, &kp ESC, 1 2);
 		COMBO_ALL(tab, &kp TAB, 9 10);
-		COMBO_ALL(enter, &kp ENTER, 21 22);
+		COMBO_ALL(enter, &kp ENTER, 37 38);
 		COMBO_ALL(bspc, &kp BSPC, 13 14);
 
 		COMBO_L0(rctrl, &kp RCTRL, 35 36);
