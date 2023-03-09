@@ -47,7 +47,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <0>; \
-  }
+  };
 
 #define COMBO_L0(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -55,7 +55,7 @@
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <0>; \
-  }
+  };
 
 / {
 	behaviors {
@@ -70,17 +70,17 @@
 	combos {
 		compatible = "zmk,combos";
 
-		COMBO_ALL(esc, <&kp ESC>, <1 2>);
-		COMBO_ALL(tab, &kp TAB, 9 10);
-		COMBO_ALL(enter, &kp ENTER, 21 22);
-		COMBO_ALL(bspc, &kp BSPC, 13 14);
+		COMBO_ALL(esc, <&kp ESC>, <1 2>)
+		COMBO_ALL(tab, &kp TAB, 9 10)
+		COMBO_ALL(enter, &kp ENTER, 21 22)
+		COMBO_ALL(bspc, &kp BSPC, 13 14)
 
-		COMBO_L0(rctrl, &kp RCTRL, 35 36);
-		COMBO_L0(rlalt, &kp LALT, 35 37);
-		COMBO_L0(rgui, &kp RGUI, 35 38);
-		COMBO_L0(lctrl, &kp LCTRL, 27 28);
-		COMBO_L0(lalt, &kp LALT, 26 28);
-		COMBO_L0(lgui, &kp LGUI, 25 28);
+		COMBO_L0(rctrl, &kp RCTRL, 35 36)
+		COMBO_L0(rlalt, &kp LALT, 35 37)
+		COMBO_L0(rgui, &kp RGUI, 35 38)
+		COMBO_L0(lctrl, &kp LCTRL, 27 28)
+		COMBO_L0(lalt, &kp LALT, 26 28)
+		COMBO_L0(lgui, &kp LGUI, 25 28)
 	};
 
 	keymap {
