@@ -41,6 +41,22 @@
 #define KP_MULT KP_MULTIPLY
 #define KP_DIV KP_DIVIDE
 
+#define COMBO_ALL(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <30>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <0>; \
+  }
+
+#define COMBO_L0(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <30>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <0>; \
+  }
+
 / {
 	behaviors {
 	};
@@ -53,63 +69,18 @@
 
 	combos {
 		compatible = "zmk,combos";
-		combo_esc {
-			timeout-ms = <20>;
-			key-positions = <1 2>;
-			bindings = <&kp ESC>;
-			//layers = <0 1>;
-		};
-		combo_tab {
-			timeout-ms = <20>;
-			key-positions = <9 10>;
-			bindings = <&kp TAB>;
-		};
-		combo_enter {
-			timeout-ms = <20>;
-			key-positions = <21 22>;
-			bindings = <&kp ENTER>;
-		};
-		combo_bspc {
-			timeout-ms = <20>;
-			key-positions = <13 14>;
-			bindings = <&kp BSPC>;
-		};
-		combo_rctrl {
-			timeout-ms = <20>;
-			key-positions = <35 36>;
-			bindings = <&kp RCTRL>;
-			layers = <DEF>;
-		};
-		combo_rlalt {
-			timeout-ms = <20>;
-			key-positions = <35 37>;
-			bindings = <&kp LALT>;
-			layers = <DEF>;
-		};
-		combo_rgui {
-			timeout-ms = <20>;
-			key-positions = <35 38>;
-			bindings = <&kp RGUI>;
-			layers = <DEF>;
-		};
-		combo_lctrl {
-			timeout-ms = <20>;
-			key-positions = <27 28>;
-			bindings = <&kp LCTRL>;
-			layers = <DEF>;
-		};
-		combo_lalt {
-			timeout-ms = <20>;
-			key-positions = <26 28>;
-			bindings = <&kp LALT>;
-			layers = <DEF>;
-		};
-		combo_lgui {
-			timeout-ms = <20>;
-			key-positions = <25 28>;
-			bindings = <&kp LGUI>;
-			layers = <DEF>;
-		};
+
+		COMBO_ALL(esc, <&kp ESC>, <1 2>);
+		COMBO_ALL(tab, &kp TAB, 9 10);
+		COMBO_ALL(enter, &kp ENTER, 21 22);
+		COMBO_ALL(bspc, &kp BSPC, 13 14);
+
+		COMBO_L0(rctrl, &kp RCTRL, 35 36);
+		COMBO_L0(rlalt, &kp LALT, 35 37);
+		COMBO_L0(rgui, &kp RGUI, 35 38);
+		COMBO_L0(lctrl, &kp LCTRL, 27 28);
+		COMBO_L0(lalt, &kp LALT, 26 28);
+		COMBO_L0(lgui, &kp LGUI, 25 28);
 	};
 
 	keymap {
