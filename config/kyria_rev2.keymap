@@ -84,16 +84,17 @@
 		compatible = "zmk,keymap";
 
 		default_layer {
+//  Colemak on OS side
 //	---------------------------------------------------------------------------------------------------------------------------------
-//	| ??? | Q   | W   | E   | R   | T   |                             | Y   | U   | I   | O   | P   | -   |
-//	| ??? | A   | S   | D   | F   | G   |                             | H   | J   | K   | L   | ;   | '   |
-//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | \   |
+//	| ??? | Q   | W   | E   | R   | T   |                             | Y   | U   | I   | O   | P   | ??? |
+//	| ??? | A   | S   | D   | F   | G   |                             | H   | J   | K   | L   | ;   | ??? |
+//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
 //	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
-	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                                  &kp Y    &kp U     &kp I     &kp O   &kp P    &kp MINUS
-	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                                  &kp H    &kp J     &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LCTRL   &kp Z  &kp X  &kp C   &kp V    &kp B      &kp LCTRL &mo SYM    &to KPD     &none      &kp N    &kp M     &kp COMMA &kp DOT &kp FSLH &kp BSLH
-	                          &mo FUN &none    &kp LSHFT  &mo NAV   &mo NUM    &lt SYM RET &kp SPACE  &kp RALT &none     &none
+	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                                  &kp Y     &kp U     &kp I     &kp O   &kp RA(Q) &kp TAB
+	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                                  &kp H     &kp J     &kp K     &kp L   &kp SEMI  &kp RCTRL
+	&kp LSHFT   &kp Z  &kp X  &kp C   &kp V    &kp B      &kp LCTRL &mo SYM    &to KPD     &none      &kp N     &kp M     &kp COMMA &kp DOT &kp RA(P) &kp RSHFT
+	                          &mo FUN &none    &mo SYM    &mo NAV   &mo NUM    &lt SYM RET &kp SPACE  &kp RSHFT &none     &none
 			>;
 		};
 
@@ -122,14 +123,14 @@
 
 		symbol_layer {
 //	---------------------------------------------------------------------------------------------------------------------------------
-//	|     |     | (   | )   |     |     |                             | (   | &   | *   | +   | )   | _   |
-//	|     | XXX | XXX | XXX | XXX |     |                             | {   | $   | %   | ^   | }   | `   |
-//	|     | [   | {   | }   | ]   |     | --- | --- |     | --- | --- | [   | !   | @   | #   | ]   | ~   |
+//	|     | '   | (   | )   | /   | \   |                             | (   | &   | *   | +   | )   | _   |
+//	|     | XXX | XXX | XXX | XXX | P   |                             | {   | $   | %   | ^   | }   | `   |
+//	|     | [   | {   | }   | ]   | -   | --- | --- |     | --- | --- | [   | !   | @   | #   | ]   | ~   |
 //	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&trans  &kp BSPC  &kp LPAR  &kp RPAR  &none     &none                                     &kp LPAR   &kp AMPS  &kp STAR  &kp TILDE &kp RPAR  &kp UNDER
-	&trans  &kp LMO4  &kp LMO3  &kp LMO2  &kp LMO1  &none                                     &kp LBRC   &kp DLLR  &kp PRCNT &kp CARET &kp RBRC  &kp GRAVE
-	&trans  &kp LBKT  &kp RBRC  &kp RBRC  &kp RBKT  &none     &trans &trans    &trans &to DEF &kp LBKT   &kp EXCL  &kp AT    &kp HASH  &kp RBKT  &kp TILDE
+	&trans  &kp SQT   &kp LPAR  &kp RPAR  &kp FSLH  &kp BSLH                                  &kp LPAR   &kp AMPS  &kp STAR  &kp TILDE &kp RPAR  &kp UNDER
+	&trans  &kp LMO4  &kp LMO3  &kp LMO2  &kp LMO1  &kp P                                     &kp LBRC   &kp DLLR  &kp PRCNT &kp CARET &kp RBRC  &kp GRAVE
+	&trans  &kp LBKT  &kp RBRC  &kp RBRC  &kp RBKT  &kp MINUS &trans &trans    &trans &to DEF &kp LBKT   &kp EXCL  &kp AT    &kp HASH  &kp RBKT  &kp TILDE
 	                            &trans    &trans    &trans    &trans &trans    &trans &trans  &trans     &trans         &trans
 			>;
 		};
