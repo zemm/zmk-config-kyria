@@ -91,10 +91,10 @@
 //	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
 //	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
-	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                                  &kp Y     &kp U     &kp I     &kp O   &kp RA(Q) &kp TAB
-	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                                  &kp H     &kp J     &kp K     &kp L   &kp SEMI  &kp RCTRL
-	&kp LSHFT   &kp Z  &kp X  &kp C   &kp V    &kp B      &kp LCTRL &mo SYM    &to KPD     &none      &kp N     &kp M     &kp COMMA &kp DOT &kp RA(P) &kp RSHFT
-	                          &mo FUN &none    &mo SYM    &mo NAV   &mo NUM    &lt SYM RET &kp SPACE  &kp RSHFT &none     &none
+	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                              &kp Y     &kp U     &kp I     &kp O   &kp RA(Q) &kp TAB
+	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                              &kp H     &kp J     &kp K     &kp L   &kp SEMI  &kp RCTRL
+	&kp LSHFT   &kp Z  &kp X  &kp C   &kp V    &kp B      &none    &none      &none    &none      &kp N     &kp M     &kp COMMA &kp DOT &kp RA(P) &kp RSHFT
+	                          &mo FUN &mo FUN  &mo LSHFT  &mo NAV  &mo NUM    &kp RET  &kp SPACE  &mo SYM   &mo FUN   &mo FUN
 			>;
 		};
 
