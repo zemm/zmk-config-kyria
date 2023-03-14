@@ -12,15 +12,15 @@
 
 #define DEF 0
 #define NAV 1
-#define NUM 2
-#define SYM 3
-#define FUN 4
-#define KPD 5
+#define NAV2 2
+#define NUM 3
+#define SYM 4
+#define FUN 5
+#define KPD 6
 
 #define X_UNDO LC(Z)
 #define X_REDO LC(LS(Z))
 #define X_PASTE LC(V)
-#define X_PASTA LC(LA(V))
 #define X_COPY LC(C)
 #define X_CUT LC(X)
 
@@ -78,55 +78,69 @@
 		COMBO_LAYER0(rctrl, &kp RCTRL, 35 36);
 		COMBO_LAYER0(rlalt, &kp LALT, 35 37);
 		COMBO_LAYER0(rgui, &kp RGUI, 35 38);
+
+		COMBO_LAYER0(nav2, &to NAV2, 43 46);
 	};
 
 	keymap {
 		compatible = "zmk,keymap";
 
+		//  Colemak on OS side
 		default_layer {
-//  Colemak on OS side
-//	---------------------------------------------------------------------------------------------------------------------------------
-//	| ??? | Q   | W   | E   | R   | T   |                             | Y   | U   | I   | O   | P   | ??? |
-//	| ??? | A   | S   | D   | F   | G   |                             | H   | J   | K   | L   | ;   | ??? |
-//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
-//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
+			//	---------------------------------------------------------------------------------------------------------------------------------
+			//	| ??? | Q   | W   | E   | R   | T   |                             | Y   | U   | I   | O   | P   | ??? |
+			//	| ??? | A   | S   | D   | F   | G   |                             | H   | J   | K   | L   | ;   | ??? |
+			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
+			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
-	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                              &kp Y     &kp U     &kp I     &kp O   &kp RA(Q) &kp TAB
-	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                              &kp H     &kp J     &kp K     &kp L   &kp SEMI  &kp RCTRL
-	&kp LSHFT   &kp Z  &kp X  &kp C   &kp V    &kp B      &none    &none      &none    &none      &kp N     &kp M     &kp COMMA &kp DOT &kp RA(P) &kp RSHFT
-	                          &mo FUN &mo FUN  &mo LSHFT  &mo NAV  &mo NUM    &kp RET  &kp SPACE  &mo SYM   &mo FUN   &mo FUN
+	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                         &kp Y      &kp U     &kp I     &kp O   &kp RA(Q) &kp TAB
+	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                         &kp H      &kp J     &kp K     &kp L   &kp SEMI  &kp RCTRL
+	&kp LSHFT   &kp Z  &kp X  &kp C   &kp V    &kp B      &none    &none      &none          &none      &kp N     &kp M     &kp COMMA &kp DOT &kp RA(P) &kp RSHFT
+	                          &mo FUN &mo FUN  &mo LSHFT  &mo NAV  &mo NUM    &mt RCTRL RET  &kp SPACE  &mo SYM   &mo FUN   &mo FUN
 			>;
 		};
 
+		// Miryoku inspired navigation
 		navigation_layer {
 			bindings = <
-	&trans   &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp K_CUT                                    &kp INS   &kp PG_UP   &kp UP     &kp PG_DN  &kp TAB    &none
-	&trans   &kp LMO4  &kp LMO3  &kp LMO2    &kp LMO1  &kp K_COPY                                   &kp BSPC  &kp LEFT    &kp DOWN   &kp RIGHT  &none      &none
-	&trans   &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp X_PASTA  &trans &trans    &trans &to DEF &none     &kp HOME    &none      &kp END    &kp ENTER  &none
+	&trans   &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp K_CUT                                    &kp BSPC  &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL    &kp TAB
+	&trans   &kp LMO4  &kp LMO3  &kp LMO2    &kp LMO1  &kp K_COPY                                   &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp LS(TAB)
+	&trans   &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp X_PASTE  &trans &trans    &trans &to DEF &kp INS   &none       &none      &none      &kp ENTER  &kp LALT
 	                             &trans      &trans    &trans       &trans &trans    &trans &trans  &mo NUM   &trans      &trans
 			>;
 		};
 
-		number_layer {
-//	---------------------------------------------------------------------------------------------------------------------------------
-//	|     |     | (   | )   | =   |     |                             | *   | 7   | 8   | 9   | -   |     |
-//	|     | XXX | XXX | XXX | XXX |     |                             | .   | 4   | 5   | 6   | +   |     |
-//	|     | [   | {   | }   | ]   |     | --- | --- |     | --- | --- | ,   | 1   | 2   | 3   | /   |     |
-//	                  | --- | --- | --- | --- | --- |     | --- | --- | 0   | --- | --- |
+		// Kinesis Advantage inspired navigation
+		navigation2_layer {
 			bindings = <
-	&trans  &kp BSPC  &kp LPAR  &kp RPAR  &kp EQUAL &none                                    &kp STAR  &kp N7  &kp N8  &kp N9  &kp MINUS &none
+	&trans   &kp BSPC  &kp TAB   &kp HOME    &kp EN    &kp K_CUT                                     &kp BSPC  &kp PG_UP   &kp PG_DN  &none     &kp DEL   &kp TAB
+	&trans   &kp LCTRL &kp LSHFT &kp LEFT    &kp RIGHT &kp K_COPY                                    &none     &kp UP      &kp DOWN   &kp RSHFT &kp RCTRL &kp LS(TAB)
+	&trans   &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp X_PASTE  &trans &trans    &trans  &to DEF &kp INS   &none       &none      &none     &kp ENTER &kp LALT
+	                             &trans      &trans    &trans       &trans &to DEF   &to DEF &none   &mo NUM   &trans      &trans
+			>;
+		};
+
+		number_layer {
+			//	---------------------------------------------------------------------------------------------------------------------------------
+			//	|     | {   | (   | )   | }   | =   |                             | *   | 7   | 8   | 9   | -   |     |
+			//	|     | XXX | XXX | XXX | XXX |     |                             | .   | 4   | 5   | 6   | +   |     |
+			//	|     | XXX | XXX | XXX | XXX |     | --- | --- |     | --- | --- | ,   | 1   | 2   | 3   | /   |     |
+			//	                  | --- | --- | --- | --- | --- |     | --- | --- | 0   | --- | --- |
+			bindings = <
+	&trans  &kp LBKT  &kp LPAR  &kp RPAR  &kp RBKT  &kp EQUAL                                &kp STAR  &kp N7  &kp N8  &kp N9  &kp MINUS &none
 	&trans  &kp LMO4  &kp LMO3  &kp LMO2  &kp LMO1  &none                                    &kp DOT   &kp N4  &kp N5  &kp N6  &kp PLUS  &none
-	&trans  &kp LBKT  &kp RBRC  &kp RBRC  &kp RBKT  &none    &trans &trans    &trans &to DEF &kp COMMA &kp N1  &kp N2  &kp N3  &kp FSLH  &none
+	&trans  &sk LMO4  &sk LMO3  &sk LMO2  &sk LMO1  &none    &trans &trans    &trans &to DEF &kp COMMA &kp N1  &kp N2  &kp N3  &kp FSLH  &none
 	                            &trans    &trans    &trans   &trans &trans    &trans &trans  &kp N0    &trans  &trans
 			>;
 		};
 
+		// TODO
 		symbol_layer {
-//	---------------------------------------------------------------------------------------------------------------------------------
-//	|     | '   | (   | )   | /   | \   |                             | (   | &   | *   | +   | )   | _   |
-//	|     | XXX | XXX | XXX | XXX | P   |                             | {   | $   | %   | ^   | }   | `   |
-//	|     | [   | {   | }   | ]   | -   | --- | --- |     | --- | --- | [   | !   | @   | #   | ]   | ~   |
-//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
+			//	---------------------------------------------------------------------------------------------------------------------------------
+			//	|     | '   | (   | )   | /   | \   |                             | (   | &   | *   | +   | )   | _   |
+			//	|     | XXX | XXX | XXX | XXX | P   |                             | {   | $   | %   | ^   | }   | `   |
+			//	|     | [   | {   | }   | ]   | -   | --- | --- |     | --- | --- | [   | !   | @   | #   | ]   | ~   |
+			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
 	&trans  &kp SQT   &kp LPAR  &kp RPAR  &kp FSLH  &kp BSLH                                  &kp LPAR   &kp AMPS  &kp STAR  &kp TILDE &kp RPAR  &kp UNDER
 	&trans  &kp LMO4  &kp LMO3  &kp LMO2  &kp LMO1  &kp P                                     &kp LBRC   &kp DLLR  &kp PRCNT &kp CARET &kp RBRC  &kp GRAVE
@@ -144,10 +158,9 @@
 			>;
 		};
 
-//
-// May delete these
-//
+		// @TODO: Dedicated left/right hand layouts
 
+		// @TODO: Delete keypad?
 		keypad_layer {
 //	---------------------------------------------------------------------------------------------------------------------------------
 //	|     |     | (   | )   | =   |     |                             | NML | 7   | 8   | 9   | ^   | KP= |
