@@ -101,8 +101,8 @@
 		navigation_layer {
 			bindings = <
 	&trans   &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp K_CUT                                    &kp BSPC  &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL    &kp TAB
-	&trans   &sp LMO4  &sp LMO3  &sp LMO2    &sp LMO1  &kp K_COPY                                   &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp LS(TAB)
-	&trans   &sk LMO2  &sk LMO1  &sk LEFT    &kp RIGHT &kp X_PASTE  &trans &trans    &trans &to DEF &kp INS   &kp UP      &kp DOWN   &none      &kp ENTER  &kp LALT
+	&trans   &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp K_COPY                                   &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp LS(TAB)
+	&trans   &kp LMO2  &kp LMO1  &kp LEFT    &kp RIGHT &kp X_PASTE  &trans &trans    &trans &to DEF &kp INS   &kp UP      &kp DOWN   &none      &kp ENTER  &kp LALT
 	                             &trans      &trans    &trans       &trans &trans    &trans &trans  &mo NUM   &trans      &trans
 			>;
 		};
