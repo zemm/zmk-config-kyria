@@ -12,11 +12,10 @@
 
 #define DEF 0
 #define NAV 1
-#define NAV2 2
-#define NUM 3
-#define SYM 4
-#define FUN 5
-#define KPD 6
+#define NUM 2
+#define SYM 3
+#define FUN 4
+#define KPD 5
 
 #define X_UNDO LC(Z)
 #define X_REDO LC(LS(Z))
@@ -28,11 +27,11 @@
 // Modifiers for left/right side fingers: 4=little 3=ring 2=middle 1=index
 #define LMO4 LGUI
 #define LMO3 LALT
-#define LMO2 LCTRL
-#define LMO1 LSHFT
+#define LMO2 LSHFT
+#define LMO1 LCTRL
 
-#define RMO1 RSHFT
-#define RMO2 RCTRL
+#define RMO1 RCTRL
+#define RMO2 RSHFT
 #define RMO3 LALT
 #define RMO4 RGUI
 
@@ -104,19 +103,9 @@
 		navigation_layer {
 			bindings = <
 	&trans   &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp K_CUT                                    &kp BSPC  &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL    &kp TAB
-	&trans   &kp LMO4  &kp LMO3  &kp LMO2    &kp LMO1  &kp K_COPY                                   &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp LS(TAB)
-	&trans   &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp X_PASTE  &trans &trans    &trans &to DEF &kp INS   &none       &none      &none      &kp ENTER  &kp LALT
+	&trans   &sp LMO4  &sp LMO3  &sp LMO2    &sp LMO1  &kp K_COPY                                   &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp LS(TAB)
+	&trans   &sk LMO2  &sk LMO1  &sk LEFT    &kp RIGHT &kp X_PASTE  &trans &trans    &trans &to DEF &kp INS   &kp UP      &kp DOWN   &none      &kp ENTER  &kp LALT
 	                             &trans      &trans    &trans       &trans &trans    &trans &trans  &mo NUM   &trans      &trans
-			>;
-		};
-
-		// Kinesis Advantage inspired navigation
-		navigation2_layer {
-			bindings = <
-	&trans   &kp BSPC  &kp TAB   &kp HOME    &kp EN    &kp K_CUT                                     &kp BSPC  &kp PG_UP   &kp PG_DN  &none     &kp DEL   &kp TAB
-	&trans   &kp LCTRL &kp LSHFT &kp LEFT    &kp RIGHT &kp K_COPY                                    &none     &kp UP      &kp DOWN   &kp RSHFT &kp RCTRL &kp LS(TAB)
-	&trans   &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp X_PASTE  &trans &trans    &trans  &to DEF &kp INS   &none       &none      &none     &kp ENTER &kp LALT
-	                             &trans      &trans    &trans       &trans &to DEF   &to DEF &none   &mo NUM   &trans      &trans
 			>;
 		};
 
