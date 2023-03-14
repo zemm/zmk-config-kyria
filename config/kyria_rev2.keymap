@@ -130,7 +130,7 @@
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
 	&trans  &kp SQT   &kp LPAR  &kp RPAR  &kp FSLH  &kp BSLH                                  &kp LPAR   &kp AMPS  &kp STAR  &kp TILDE &kp RPAR  &kp UNDER
-	&trans  &kp LMO4  &kp LMO3  &kp LMO2  &kp LMO1  &kp P                                     &kp LBRC   &kp DLLR  &kp PRCNT &kp CARET &kp RBRC  &kp GRAVE
+	&trans  &sk LMO4  &sk LMO3  &sk LMO2  &sk LMO1  &kp P                                     &kp LBRC   &kp DLLR  &kp PRCNT &kp CARET &kp RBRC  &kp GRAVE
 	&trans  &kp LBKT  &kp RBRC  &kp RBRC  &kp RBKT  &kp MINUS &trans &trans    &trans &to DEF &kp LBKT   &kp EXCL  &kp AT    &kp HASH  &kp RBKT  &kp TILDE
 	                            &trans    &trans    &trans    &trans &trans    &trans &trans  &trans     &trans         &trans
 			>;
