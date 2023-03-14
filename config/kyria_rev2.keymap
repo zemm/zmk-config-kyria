@@ -115,9 +115,9 @@
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | 0   | --- | --- |
 			bindings = <
 	&trans  &kp LBKT  &kp LPAR  &kp RPAR  &kp RBKT  &kp EQUAL                                &kp STAR  &kp N7  &kp N8  &kp N9  &kp MINUS &none
-	&trans  &kp LMO4  &kp LMO3  &kp LMO2  &kp LMO1  &none                                    &kp DOT   &kp N4  &kp N5  &kp N6  &kp PLUS  &none
-	&trans  &sk LMO4  &sk LMO3  &sk LMO2  &sk LMO1  &none    &trans &trans    &trans &to DEF &kp COMMA &kp N1  &kp N2  &kp N3  &kp FSLH  &none
-	                            &trans    &trans    &trans   &trans &trans    &trans &trans  &kp N0    &trans  &trans
+	&trans  &sk LMO4  &sk LMO3  &sk LMO2  &sk LMO1  &none                                    &kp DOT   &kp N4  &kp N5  &kp N6  &kp PLUS  &none
+	&trans  &none     &none     &none     &none     &none    &trans &trans    &trans &to DEF &kp COMMA &kp N1  &kp N2  &kp N3  &kp FSLH  &none
+	                            &trans    &trans    &trans   &trans &trans    &trans &kp N0  &trans    &trans  &trans
 			>;
 		};
 
