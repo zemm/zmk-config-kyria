@@ -90,20 +90,20 @@
 			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
 			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
-	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                                    &kp Y    &kp U    &kp I     &kp O    &kp P     &kp TAB
-	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                                    &kp H    &kp J    &kp K     &kp L    &kp SEMI  &kp RA(Q)
-	&kp LSHFT   &kp Z  &kp X  &kp C   &kp V    &kp B      &none    &none      &none          &none      &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RA(P)
-	                          &mo FUN &mo FUN  &mo LSHFT  &mo NAV  &mo NUM    &mt RCTRL RET  &kp SPACE  &mo SYM  &mo FUN  &mo FUN
+	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                              &kp Y    &kp U    &kp I     &kp O    &kp P     &kp RA(Q)
+	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                              &kp H    &kp J    &kp K     &kp L    &kp SEMI  &kp RA(P)
+	&kp LSHFT   &kp Z  &kp X  &kp C   &kp V    &kp B    &none    &none      &none      &none      &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RSHIFT
+	                          &mo FUN &mo FUN  &mo SYM  &mo NAV  &mo NUM    &kp RCTRL  &kp SPACE  &mo NUM  &mo NAV  &mo FUN
 			>;
 		};
 
 		// Miryoku inspired navigation
 		navigation_layer {
 			bindings = <
-	&trans  &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp K_CUT                                      &kp BSPC  &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL    &kp TAB
-	&trans  &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp K_COPY                                     &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp LS(TAB)
-	&trans  &kp LMO2  &kp LMO1  &kp LEFT    &kp RIGHT &kp X_PASTE  &trans  &trans    &trans  &none   &kp INS   &kp UP      &kp DOWN   &kp RALT   &kp RCTRL  &kp LALT
-	                            &trans      &trans    &trans       &trans  &trans    &trans  &trans  &mo NUM   &trans      &trans
+	&trans  &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp K_CUT                                         &kp BSPC  &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL    &kp TAB
+	&trans  &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp K_COPY                                        &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp LS(TAB)
+	&trans  &kp LMO2  &kp LMO1  &kp LEFT    &kp RIGHT &kp X_PASTE  &trans  &trans    &trans     &none   &kp INS   &kp UP      &kp DOWN   &kp RALT   &kp RCTRL  &kp LALT
+	                            &trans      &trans    &trans       &trans  &trans    &kp ENTER  &trans  &mo NUM   &trans      &trans
 			>;
 		};
 
