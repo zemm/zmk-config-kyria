@@ -102,7 +102,7 @@
 			bindings = <
 	&trans  &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp K_CUT                                         &kp BSPC  &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL    &kp TAB
 	&trans  &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp K_COPY                                        &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp LS(TAB)
-	&trans  &kp LMO2  &kp LMO1  &kp LEFT    &kp RIGHT &kp X_PASTE  &trans  &trans    &trans     &none   &kp INS   &kp UP      &kp DOWN   &sp RALT   &sp RCTRL  &kp LALT
+	&trans  &kp LMO2  &kp LMO1  &kp LEFT    &kp RIGHT &kp X_PASTE  &trans  &trans    &trans     &none   &kp INS   &kp UP      &kp DOWN   &sk RALT   &sk RCTRL  &kp LALT
 	                            &trans      &trans    &trans       &trans  &trans    &kp ENTER  &trans  &mo NUM   &trans      &trans
 			>;
 		};
