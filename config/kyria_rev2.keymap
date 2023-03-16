@@ -102,37 +102,37 @@
 			bindings = <
 	&trans  &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp K_CUT                                         &kp BSPC  &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL    &kp TAB
 	&trans  &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp K_COPY                                        &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp LS(TAB)
-	&trans  &kp LMO2  &kp LMO1  &kp LEFT    &kp RIGHT &kp X_PASTE  &trans  &trans    &trans     &none   &kp INS   &kp UP      &kp DOWN   &kp RALT   &kp RCTRL  &kp LALT
+	&trans  &kp LMO2  &kp LMO1  &kp LEFT    &kp RIGHT &kp X_PASTE  &trans  &trans    &trans     &none   &kp INS   &kp UP      &kp DOWN   &sp RALT   &sp RCTRL  &kp LALT
 	                            &trans      &trans    &trans       &trans  &trans    &kp ENTER  &trans  &mo NUM   &trans      &trans
 			>;
 		};
 
 		number_layer {
 			//	---------------------------------------------------------------------------------------------------------------------------------
-			//	|     | {   | (   | )   | }   | =   |                             | *   | 7   | 8   | 9   | -   |     |
-			//	|     | XXX | XXX | XXX | XXX |     |                             | .   | 4   | 5   | 6   | +   |     |
-			//	|     | XXX | XXX | XXX | XXX |     | --- | --- |     | --- | --- | ,   | 1   | 2   | 3   | /   |     |
-			//	                  | --- | --- | --- | --- | --- |     | --- | --- | 0   | --- | --- |
+			//	|     | ^   | $   | {   | }   | €   |                             | *   | 7   | 8   | 9   | P   |     |
+			//	|     | ~ X | | X | ( X | ) X | %   |                             | =   | 4   | 5   | 6   | +   |     |
+			//	|     | <   | >   | [   | ]   |     | --- | --- |     | --- | --- | -   | 1   | 2   | 3   | /   |     |
+			//	                  | --- | --- | --- | --- | --- |     | ,   | 0   | .   | --- | --- |
 			bindings = <
-	&trans  &kp LBKT  &kp LPAR  &kp RPAR  &kp RBKT  &kp EQUAL                                 &kp STAR  &kp N7  &kp N8  &kp N9  &kp MINUS &none
-	&trans  &sk LMO4  &sk LMO3  &sk LMO2  &sk LMO1  &none                                     &kp DOT   &kp N4  &kp N5  &kp N6  &kp PLUS  &none
-	&trans  &none     &none     &none     &none     &none    &trans &trans    &trans  &to DEF &kp COMMA &kp N1  &kp N2  &kp N3  &kp FSLH  &none
-	                            &trans    &trans    &trans   &trans &to DEF   &to DEF &kp N0  &trans    &trans  &trans
+	&trans  &kp CARET      &kp DLLR      &kp LBRC      &kp RBRC      &kp RA(N5)                                   &kp STAR  &kp N7  &kp N8  &kp N9  &kp P    &none
+	&trans  &mt LMO4 TILDE &mt LMO3 PIPE &mt LMO2 LPAR &mt LMO1 RPAR &kp PRCNT                                    &kp EQUAL &kp N4  &kp N5  &kp N6  &kp PLUS &none
+	&trans  &kp LS(COMMA)  &kp LS(DOT)   &kp LBKT      &kp RBKT      &none      &trans &trans    &trans    &trans &kp MINUS &kp N1  &kp N2  &kp N3  &kp FSLH &none
+	                                    &trans        &trans        &trans      &trans &to DEF   &to COMMA &kp N0 &kp DOT   &trans  &trans
 			>;
 		};
 
 		// TODO
 		symbol_layer {
 			//	---------------------------------------------------------------------------------------------------------------------------------
-			//	|     | '   | (   | )   | /   | \   |                             | (   | &   | *   | +   | )   | _   |
-			//	|     | XXX | XXX | XXX | XXX | P   |                             | {   | $   | %   | ^   | }   | `   |
-			//	|     | [   | {   | }   | ]   | -   | --- | --- |     | --- | --- | [   | !   | @   | #   | ]   | ~   |
+			//	|     | ^   | $   | {   | }   | €   |                             | *   | ?   | &   | _   | P   |     |
+			//	|     | ~   | |   | (   | )   | %   |                             | =   | #   | "   | '   | +   |     |
+			//	|     | \   | `   | [   | ]   | @   | --- | --- |     | --- | --- | -   | !   | <   | >   | /   |     |
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&trans  &kp SQT   &kp LPAR  &kp RPAR  &kp FSLH  &kp BSLH                                   &kp LPAR   &kp AMPS  &kp STAR  &kp TILDE &kp RPAR  &kp UNDER
-	&trans  &sk LMO4  &sk LMO3  &sk LMO2  &sk LMO1  &kp P                                      &kp LBRC   &kp DLLR  &kp PRCNT &kp CARET &kp RBRC  &kp GRAVE
-	&trans  &kp LBKT  &kp RBRC  &kp RBRC  &kp RBKT  &kp MINUS &trans &trans    &trans  &to DEF &kp LBKT   &kp EXCL  &kp AT    &kp HASH  &kp RBKT  &kp TILDE
-	                            &trans    &trans    &trans    &trans &to DEF   &to DEF &trans  &trans     &trans         &trans
+	&trans  &kp CARET &kp DLLR  &kp LBRC  &kp RBRC  &kp RA(N5)                                 &kp STAR  &kp QMARK &kp AMPS      &kp UNDER   &kp P     &none
+	&trans  &kp TILDE &kp PIPE  &kp LPAR  &kp RPAR  &kp PRCNT                                  &kp EQUAL &kp HASH  &kp DQT       &kp SQT     &kp PLUS  &none
+	&trans  &kp BSLH  &kp GRAVE &kp LBKT  &kp RBKT  &kp AT    &trans &trans    &trans  &to DEF &kp MINUS &kp EXCL  &kp LS(COMMA) &kp LS(DOT) &kp FSLH  &kp BSLH
+	                            &trans    &trans    &trans    &trans &to DEF   &to DEF &trans  &trans    &trans    &trans
 			>;
 		};
 
