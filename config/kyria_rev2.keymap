@@ -15,7 +15,7 @@
 #define NUM 2
 #define SYM 3
 #define FUN 4
-#define ONE 5
+#define ONE 4
 
 #define X_UNDO LC(Z)
 #define X_REDO LC(LS(Z))
@@ -166,20 +166,6 @@
 	&bt BT_SEL 1 &kp LMO4     &kp LMO3     &kp LMO2     &kp LMO1         &kp C_PREV                                        &kp F11 &kp F4 &kp F5 &kp F6 &rgb_ug RGB_HUI &rgb_ug RGB_BRI
 	&bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp PSCRN    &kp INS          &out OUT_TOG &trans &trans       &trans   &to DEF &kp F10 &kp F1 &kp F2 &kp F3 &rgb_ug RGB_HUD &rgb_ug RGB_BRD
 	                                       &trans       &trans           &trans       &trans &bt BT_CLR   &kp CAPS &trans  &trans  &trans &trans
-			>;
-		};
-
-		onehand_layer {
-			//	---------------------------------------------------------------------------------------------------------------------------------
-			//	| ??? | Q   | W   | E   | R   | T   |                             | Y   | U   | I   | O   | P   | ??? |
-			//	| ??? | A   | S   | D   | F   | G   |                             | H   | J   | K   | L   | ;   | ??? |
-			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
-			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
-			bindings = <
-	&kp ESC     &dk Q RA(Q) &dk W O   &dk E I     &dk R U  &dk T Y                                                &dk Y T  &dk U R  &dk I E     &dk O W   &dk P Q    &kp RA(Q)
-	&kp BSPC    &dk A RA(P) &dk S L   &dk D L     &dk F J  &dk G H                                                &dk H G  &dk J F  &dk K D     &dk L S   &dk SEMI A &kp RA(P)
-	&kp LSHFT   &dk Z FSLH  &dk X DOT &dk C COMMA &dk V M  &dk B N  &none   &none      &none        &none         &dk N B  &dk M V  &dk COMMA C &dk DOT X &dk FSLH Z &kp RSHIFT
-	                                  &mo FUN     &mo FUN  &mo SYM  &mo NAV &kp LCTRL  &mt LALT RET &lt SYM SPACE &mo NUM  &mo NAV  &mo FUN
 			>;
 		};
 	};
