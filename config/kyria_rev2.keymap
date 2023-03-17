@@ -108,7 +108,6 @@
 			>;
 		};
 
-		// Miryoku inspired navigation
 		navigation_layer {
 			bindings = <
 	&trans  &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp LS(TAB)                                    &kp BSPC  &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL    &kp TAB
@@ -132,7 +131,6 @@
 			>;
 		};
 
-		// TODO
 		symbol_layer {
 			//	---------------------------------------------------------------------------------------------------------------------------------
 			//	|     | ^   | $   | {   | }   | €   |                             | =   | ?   | &   | _   | P   |     |
@@ -140,10 +138,10 @@
 			//	|     | \   | `   | [   | ]   | @   | --- | --- |     | --- | --- | *   | !   | <   | >   | /   |     |
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&trans  &kp CARET &kp DLLR  &kp LBRC  &kp RBRC  &kp RA(N5)                                 &kp EQUAL &kp QMARK &kp AMPS      &kp UNDER   &kp P     &none
-	&trans  &kp TILDE &kp HASH  &kp LPAR  &kp RPAR  &kp PRCNT                                  &kp MINUS &kp DQT   &kp SQT       &kp PIPE    &kp PLUS  &none
-	&trans  &kp BSLH  &kp GRAVE &kp LBKT  &kp RBKT  &kp AT    &trans &trans    &trans  &to DEF &kp STAR  &kp EXCL  &kp LS(COMMA) &kp LS(DOT) &kp FSLH  &kp BSLH
-	                            &trans    &trans    &trans    &trans &to DEF   &to DEF &trans  &trans    &trans    &trans
+	&trans  &kp CARET &kp DLLR  &kp LBRC  &kp RBRC  &kp RA(N5)                              &kp EQUAL &kp QMARK &kp AMPS      &kp UNDER   &kp P     &none
+	&trans  &kp TILDE &kp HASH  &kp LPAR  &kp RPAR  &kp PRCNT                               &kp MINUS &kp DQT   &kp SQT       &kp PIPE    &kp PLUS  &none
+	&trans  &kp BSLH  &kp GRAVE &kp LBKT  &kp RBKT  &kp AT    &trans &trans   &trans &trans &kp STAR  &kp EXCL  &kp LS(COMMA) &kp LS(DOT) &kp FSLH  &kp BSLH
+	                            &trans    &trans    &trans    &trans &trans   &trans &trans &trans    &trans    &trans
 			>;
 		};
 
