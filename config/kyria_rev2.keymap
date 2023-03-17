@@ -110,10 +110,10 @@
 
 		navigation_layer {
 			bindings = <
-	&trans  &kp LS(TAB) &kp TAB   &kp LS(TAB) &kp TAB   &none                                      &kp BSPC  &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL    &kp TAB
-	&trans  &sk LMO4    &sk LMO3  &sk LMO2    &sk LMO1  &kp DEL                                    &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp SPACE
-	&trans  &kp LMO2    &sk RALT  &kp LEFT    &kp RIGHT &kp X_PASTE &trans &trans    &trans &trans &kp INS   &kp UP      &kp DOWN   &sk RALT   &sk RCTRL  &caps_word
-	                              &trans      &trans    &trans      &trans &trans    &trans &trans &trans    &trans      &trans
+	&trans  &kp LS(TAB) &kp TAB   &kp LS(TAB) &kp TAB   &none                                     &kp BSPC  &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL    &kp TAB
+	&trans  &sk LMO4    &sk LMO3  &sk LMO2    &sk LMO1  &kp DEL                                   &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END    &kp SPACE
+	&trans  &kp LMO2    &sk RALT  &kp LEFT    &kp RIGHT &kp X_PASTE &trans &trans   &trans &trans &kp INS   &kp UP     &kp DOWN  &sk RALT   &sk RCTRL  &caps_word
+	                              &trans      &trans    &trans      &trans &trans   &trans &trans &trans    &trans     &trans
 			>;
 		};
 
@@ -124,10 +124,10 @@
 			//	|     | <   | >   | [   | ]   |     | --- | --- |     | --- | --- | .   | 1   | 2   | 3   | 0   | ,   |
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&trans  &kp CARET      &kp DLLR      &kp LBRC      &kp RBRC      &kp RA(N5)                                &kp EQUAL &kp N7  &kp N8  &kp N9  &kp MINUS  &kp SPACE
-	&trans  &mt LMO4 TILDE &mt LMO3 HASH &mt LMO2 LPAR &mt LMO1 RPAR &kp PRCNT                                 &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp FSLH
-	&trans  &kp LS(COMMA)  &kp LS(DOT)   &kp LBKT      &kp RBKT      &none      &trans &trans    &trans &trans &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0     &kp COMMA
-	                                     &trans        &trans        &trans     &trans &trans    &trans &trans &trans    &trans  &trans
+	&trans  &kp CARET      &kp DLLR      &kp LBRC      &kp RBRC      &kp RA(N5)                               &kp EQUAL &kp N7  &kp N8  &kp N9  &kp MINUS  &kp SPACE
+	&trans  &mt LMO4 TILDE &mt LMO3 HASH &mt LMO2 LPAR &mt LMO1 RPAR &kp PRCNT                                &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp FSLH
+	&trans  &kp LS(COMMA)  &kp LS(DOT)   &kp LBKT      &kp RBKT      &none      &trans &trans   &trans &trans &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0     &kp COMMA
+	                                     &trans        &trans        &trans     &trans &trans   &trans &trans &trans    &trans  &trans
 			>;
 		};
 
