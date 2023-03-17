@@ -58,7 +58,7 @@
 		dk: double-key {
 			compatible = "zmk,behavior-hold-tap";
 			label = "DOUBLE_KEY";
-			binding-cells = <2>;
+			#binding-cells = <2>;
 			flavor = "tap-preferred";
 			tapping-term-ms = <100>;
 			quick-tap-ms = <70>;
@@ -146,14 +146,14 @@
 		symbol_layer {
 			//	---------------------------------------------------------------------------------------------------------------------------------
 			//	|     | ^   | $   | {   | }   | €   |                             | =   | ?   | &   | _   | -   |     |
-			//	|     | ~   | #   | (   | )   | %   |                             | *   | |   | '   | "   | '   |     |
-			//	|     | \   | `   | [   | ]   | @   | --- | --- |     | --- | --- |     | !   | <   | >   | /   |     |
+			//	|     | ~   | @   | (   | )   | %   |                             | *   | |   | '   | "   | '   |     |
+			//	|     | \   | `   | [   | ]   | #   | --- | --- |     | --- | --- | #   | !   | <   | >   | /   |     |
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&trans  &kp CARET &kp DLLR  &kp LBRC  &kp RBRC  &kp RA(N5)                              &kp EQUAL &kp QMARK &kp AMPS      &kp UNDER   &kp MINUS &none
-	&trans  &kp TILDE &kp HASH  &kp LPAR  &kp RPAR  &kp PRCNT                               &kp STAR  &kp PIPE  &kp QMARK     &kp DQT     &kp SQT   &none
-	&trans  &kp BSLH  &kp GRAVE &kp LBKT  &kp RBKT  &kp AT    &trans &trans   &trans &trans &none     &kp EXCL  &kp LS(COMMA) &kp LS(DOT) &kp FSLH  &trans
-	                            &trans    &trans    &trans    &trans &trans   &trans &trans &trans    &trans    &trans
+	&trans  &kp CARET &kp DLLR  &kp LBRC  &kp RBRC  &kp RA(N5)                               &kp EQUAL &kp QMARK &kp AMPS      &kp UNDER   &kp MINUS &none
+	&trans  &kp TILDE &kp AT    &kp LPAR  &kp RPAR  &kp PRCNT                                &kp STAR  &kp PIPE  &kp QMARK     &kp DQT     &kp SQT   &none
+	&trans  &kp BSLH  &kp GRAVE &kp LBKT  &kp RBKT  &kp HASH   &trans &trans   &trans &trans &kp HASH  &kp EXCL  &kp LS(COMMA) &kp LS(DOT) &kp FSLH  &trans
+	                            &trans    &trans    &trans     &trans &trans   &trans &trans &trans    &trans    &trans
 			>;
 		};
 
@@ -173,9 +173,9 @@
 			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
 			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
-	&kp ESC     &dk Q RA(Q) &dp W O   &dp E I     &dp R U  &dp T Y                                                &dp Y T  &dp U R  &dp I E     &dp O W   &dp P Q    &kp RA(Q)
-	&kp BSPC    &dp A RA(P) &dp S L   &dp D L     &dp F J  &dp G H                                                &dp H G  &dp J F  &dp K D     &dp L S   &dp SEMI A &kp RA(P)
-	&kp LSHFT   &dp Z FSLH  &dp X DOT &dp C COMMA &dp V M  &dp B N  &none   &none      &none        &none         &dp N B  &dp M V  &dp COMMA C &dp DOT X &dp FSLH Z &kp RSHIFT
+	&kp ESC     &dk Q RA(Q) &dk W O   &dk E I     &dk R U  &dk T Y                                                &dk Y T  &dk U R  &dk I E     &dk O W   &dk P Q    &kp RA(Q)
+	&kp BSPC    &dk A RA(P) &dk S L   &dk D L     &dk F J  &dk G H                                                &dk H G  &dk J F  &dk K D     &dk L S   &dk SEMI A &kp RA(P)
+	&kp LSHFT   &dk Z FSLH  &dk X DOT &dk C COMMA &dk V M  &dk B N  &none   &none      &none        &none         &dk N B  &dk M V  &dk COMMA C &dk DOT X &dk FSLH Z &kp RSHIFT
 	                                  &mo FUN     &mo FUN  &mo SYM  &mo NAV &kp LCTRL  &mt LALT RET &lt SYM SPACE &mo NUM  &mo NAV  &mo FUN
 			>;
 		};
