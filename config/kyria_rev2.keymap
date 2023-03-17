@@ -15,6 +15,7 @@
 #define NUM 2
 #define SYM 3
 #define FUN 4
+#define ONE 5
 
 #define X_UNDO LC(Z)
 #define X_REDO LC(LS(Z))
@@ -79,6 +80,8 @@
 
 		COMBO_LAYER0(caps_word, &caps_word, 27 28);
 		COMBO_LAYER0(caps_word, &caps_word, 37 38);
+
+		COMBO_ALL(l_one, &tog ONE, 43 44);
 	};
 
 	conditional_layers {
@@ -146,10 +149,24 @@
 
 		function_layer {
 			bindings = <
-	&bt BT_SEL 0 &kp C_MUTE   &kp C_VOL_UP &kp C_VOL_DN &kp C_PREV &kp C_NEXT                                        &kp F12 &kp F7 &kp F8 &kp F9 &rgb_ug RGB_EFF &rgb_ug RGB_TOG
-	&bt BT_SEL 1 &kp LMO4     &kp LMO3     &kp LMO2     &kp LMO1   &kp C_PLAY_PAUSE                                  &kp F11 &kp F4 &kp F5 &kp F6 &rgb_ug RGB_HUI &rgb_ug RGB_BRI
-	&bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp PSCRN    &kp INS    &out OUT_TOG &trans &trans       &trans   &to DEF &kp F10 &kp F1 &kp F2 &kp F3 &rgb_ug RGB_HUD &rgb_ug RGB_BRD
-	                                       &trans       &trans     &trans       &trans &bt BT_CLR   &kp CAPS &trans  &trans  &trans &trans
+	&bt BT_SEL 0 &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp C_NEXT                                        &kp F12 &kp F7 &kp F8 &kp F9 &rgb_ug RGB_EFF &rgb_ug RGB_TOG
+	&bt BT_SEL 1 &kp LMO4     &kp LMO3     &kp LMO2     &kp LMO1         &kp C_PREV                                        &kp F11 &kp F4 &kp F5 &kp F6 &rgb_ug RGB_HUI &rgb_ug RGB_BRI
+	&bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp PSCRN    &kp INS          &out OUT_TOG &trans &trans       &trans   &to DEF &kp F10 &kp F1 &kp F2 &kp F3 &rgb_ug RGB_HUD &rgb_ug RGB_BRD
+	                                       &trans       &trans           &trans       &trans &bt BT_CLR   &kp CAPS &trans  &trans  &trans &trans
+			>;
+		};
+
+		onehand_layer {
+			//	---------------------------------------------------------------------------------------------------------------------------------
+			//	| ??? | Q   | W   | E   | R   | T   |                             | Y   | U   | I   | O   | P   | ??? |
+			//	| ??? | A   | S   | D   | F   | G   |                             | H   | J   | K   | L   | ;   | ??? |
+			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
+			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
+			bindings = <
+	&kp ESC     &dk Q RA(Q) &dp W O   &dp E I     &dp R U  &dp T Y                                                &dp Y T  &dp U R  &dp I E     &dp O W   &dp P Q    &kp RA(Q)
+	&kp BSPC    &dp A RA(P) &dp S L   &dp D L     &dp F J  &dp G H                                                &dp H G  &dp J F  &dp K D     &dp L S   &dp SEMI A &kp RA(P)
+	&kp LSHFT   &dp Z FSLH  &dp X DOT &dp C COMMA &dp V M  &dp B N  &none   &none      &none        &none         &dp N B  &dp M V  &dp COMMA C &dp DOT X &dp FSLH Z &kp RSHIFT
+	                                  &mo FUN     &mo FUN  &mo SYM  &mo NAV &kp LCTRL  &mt LALT RET &lt SYM SPACE &mo NUM  &mo NAV  &mo FUN
 			>;
 		};
 	};
