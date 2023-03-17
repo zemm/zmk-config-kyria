@@ -133,14 +133,14 @@
 
 		symbol_layer {
 			//	---------------------------------------------------------------------------------------------------------------------------------
-			//	|     | ^   | $   | {   | }   | €   |                             | =   | ?   | &   | _   | P   |     |
-			//	|     | ~   | #   | (   | )   | %   |                             | -   | "   | '   | |   | +   |     |
-			//	|     | \   | `   | [   | ]   | @   | --- | --- |     | --- | --- | *   | !   | <   | >   | /   |     |
+			//	|     | ^   | $   | {   | }   | €   |                             | =   | ?   | &   | _   | -   |     |
+			//	|     | ~   | #   | (   | )   | %   |                             | *   | |   | '   | "   | '   |     |
+			//	|     | \   | `   | [   | ]   | @   | --- | --- |     | --- | --- |     | !   | <   | >   | /   |     |
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&trans  &kp CARET &kp DLLR  &kp LBRC  &kp RBRC  &kp RA(N5)                              &kp EQUAL &kp QMARK &kp AMPS      &kp UNDER   &kp P     &none
-	&trans  &kp TILDE &kp HASH  &kp LPAR  &kp RPAR  &kp PRCNT                               &kp MINUS &kp DQT   &kp SQT       &kp PIPE    &kp PLUS  &none
-	&trans  &kp BSLH  &kp GRAVE &kp LBKT  &kp RBKT  &kp AT    &trans &trans   &trans &trans &kp STAR  &kp EXCL  &kp LS(COMMA) &kp LS(DOT) &kp FSLH  &kp BSLH
+	&trans  &kp CARET &kp DLLR  &kp LBRC  &kp RBRC  &kp RA(N5)                              &kp EQUAL &kp QMARK &kp AMPS      &kp UNDER   &kp MINUS &none
+	&trans  &kp TILDE &kp HASH  &kp LPAR  &kp RPAR  &kp PRCNT                               &kp STAR  &kp PIPE  &kp QMARK     &kp DQT     &kp SQT   &none
+	&trans  &kp BSLH  &kp GRAVE &kp LBKT  &kp RBKT  &kp AT    &trans &trans   &trans &trans &none     &kp EXCL  &kp LS(COMMA) &kp LS(DOT) &kp FSLH  &trans
 	                            &trans    &trans    &trans    &trans &trans   &trans &trans &trans    &trans    &trans
 			>;
 		};
