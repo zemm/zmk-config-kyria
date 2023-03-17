@@ -103,10 +103,10 @@
 		// Miryoku inspired navigation
 		navigation_layer {
 			bindings = <
-	&trans  &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp K_CUT                                         &kp BSPC  &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL    &kp TAB
-	&trans  &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp K_COPY                                        &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp LS(TAB)
-	&trans  &kp LMO2  &sk RALT  &kp LEFT    &kp RIGHT &kp X_PASTE  &trans  &trans    &trans     &none   &kp INS   &kp UP      &kp DOWN   &sk RALT   &sk RCTRL  &kp LALT
-	                            &trans      &trans    &trans       &trans  &trans    &kp ENTER  &trans  &mo NUM   &trans      &trans
+	&trans  &kp BSPC  &kp TAB   &kp LS(TAB) &kp TAB   &kp LS(TAB)                                    &kp BSPC  &kp PG_UP   &kp UP     &kp PG_DN  &kp DEL    &kp TAB
+	&trans  &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &none                                          &kp HOME  &kp LEFT    &kp DOWN   &kp RIGHT  &kp END    &kp SPACE
+	&trans  &kp LMO2  &sk RALT  &kp LEFT    &kp RIGHT &kp X_PASTE  &trans  &trans    &trans  &trans  &kp INS   &kp UP      &kp DOWN   &sk RALT   &sk RCTRL  &caps_word
+	                            &trans      &trans    &trans       &trans  &trans    &trans  &trans  &mo NUM   &trans      &trans
 			>;
 		};
 
