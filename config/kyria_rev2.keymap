@@ -81,6 +81,9 @@
 		COMBO_ALL(enter, &kp ENTER, 37 38);
 		COMBO_ALL(bspc, &kp BSPC, 13 14);
 
+		COMBO_ALL(l_ctrl_tab, &kp LC(TAB), 44 0);
+		COMBO_ALL(l_ctrl_shift_tab, &kp LC(LC(TAB)), 44 12);
+
 		//COMBO_LAYER0(lctrl, &sk LCTRL, 27 28);
 		COMBO_LAYER0(lalt, &sk LALT, 26 28);
 		COMBO_LAYER0(lgui, &sk LGUI, 25 28);
