@@ -55,6 +55,16 @@
 
 / {
 	behaviors {
+		dk: double-key {
+			compatible = "zmk,behavior-hold-tap";
+			label = "DOUBLE_KEY";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <100>;
+			quick-tap-ms = <70>;
+			#global-quick-tap;
+			bindings = <&kp>, <&kp>;
+		};
 	};
 
 //	---------------------------------------------------------------------------------------------------------------------------------
@@ -83,8 +93,6 @@
 
 		COMBO_LAYER0(caps_word, &caps_word, 27 28);
 		COMBO_LAYER0(caps_word, &caps_word, 37 38);
-
-		COMBO_ALL(l_one, &tog ONE, 43 44);
 	};
 
 	conditional_layers {
