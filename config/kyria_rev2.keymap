@@ -15,7 +15,7 @@
 #define NUM 2
 #define SYM 3
 #define FUN 4
-#define ONE 4
+#define ONE 5
 
 #define X_UNDO LC(Z)
 #define X_REDO LC(LS(Z))
@@ -55,6 +55,16 @@
 
 / {
 	behaviors {
+		dk: double-key {
+			compatible = "zmk,behavior-hold-tap";
+			label = "DOUBLE_KEY";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <100>;
+			quick-tap-ms = <70>;
+			#global-quick-tap;
+			bindings = <&kp>, <&kp>;
+		};
 	};
 
 //	---------------------------------------------------------------------------------------------------------------------------------
@@ -73,6 +83,8 @@
 
 		COMBO_ALL(l_ctrl_tab, &kp LC(TAB), 44 0);
 		COMBO_ALL(l_ctrl_shift_tab, &kp LC(LC(TAB)), 44 12);
+
+		COMBO_ALL(l_one, &tog ONE, 43 44);
 
 		//COMBO_LAYER0(lctrl, &sk LCTRL, 27 28);
 		COMBO_LAYER0(lalt, &sk LALT, 26 28);
@@ -107,15 +119,15 @@
 	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                                   &kp Y    &kp U    &kp I     &kp O    &kp P     &kp RA(Q)
 	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                                   &kp H    &kp J    &kp K     &kp L    &kp SEMI  &kp RA(P)
 	&kp LSHFT   &kp Z  &kp X  &kp C   &kp V    &kp B    &none    &none      &none        &none         &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RSHIFT
-	                          &mo FUN &mo FUN  &mo SYM  &mo NAV  &kp LCTRL  &mt LALT RET &lt SYM SPACE &mo NUM  &mo NAV  &mo FUN
+	                          &mo FUN &mo FUN  &mo NUM  &mo NAV  &kp LCTRL  &mt LALT RET &lt SYM SPACE &mo NUM  &mo NAV  &mo FUN
 			>;
 		};
 
 		navigation_layer {
 			bindings = <
-	&trans  &none     &kp RCTRL &kp LS(TAB) &kp TAB   &none                                     &kp BSPC  &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL    &kp TAB
-	&trans  &sk LMO4  &sk LMO3  &sk LMO2    &sk LMO1  &kp DEL                                   &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END    &kp SPACE
-	&trans  &kp LCTR  &sk RALT  &kp LEFT    &kp RIGHT &kp X_PASTE &trans &trans   &trans &trans &kp INS   &kp UP     &kp DOWN  &sk RALT   &sk RCTRL  &trans
+	&trans  &none    &kp LCTRL &kp LS(TAB) &kp TAB   &none                                     &kp BSPC  &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL    &kp TAB
+	&trans  &sk LMO4 &sk LMO3  &sk LMO2    &sk LMO1  &kp DEL                                   &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END    &kp SPACE
+	&trans  &none    &sk RALT  &kp LEFT    &kp RIGHT &kp X_PASTE &trans &trans   &trans &trans &kp INS   &kp UP     &kp DOWN  &sk RALT   &sk RCTRL  &trans
 	                            &trans      &trans    &trans      &trans &trans   &trans &trans &trans    &trans     &trans
 			>;
 		};
@@ -123,14 +135,14 @@
 		number_layer {
 			//	---------------------------------------------------------------------------------------------------------------------------------
 			//	|     | $   | {   | }   | €   | ^   |                             | =   | 7   | 8   | 9   | -   | /s  |
-			//	|     | ~ X | @ X | ( X | ) X | %   |                             | *   | 4   | 5   | 6   | +   | /   |
+			//	|     | ~ X | ( X | ) X | % X | @   |                             | *   | 4   | 5   | 6   | +   | /   |
 			//	|     | <   | [   | ]   | >   |     | --- | --- |     | --- | --- | .   | 1   | 2   | 3   | 0   | ,   |
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&trans  &kp DLLR       &kp LBRC      &kp RBRC      &kp RA(N5)  &kp CARET                                &kp EQUAL &kp N7  &kp N8  &kp N9  &kp MINUS  &kp SPACE
-	&trans  &mt LMO4 TILDE &mt LMO3 LPAR &mt LMO2 RPAR &mt LMO1 AT &kp PRCNT                                &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp FSLH
-	&trans  &kp LS(COMMA)  &kp LBKT      &kp RBKT      &kp LS(DOT) &none      &trans &trans   &trans &trans &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0     &kp COMMA
-	                                     &trans        &trans      &trans     &trans &trans   &trans &trans &trans    &trans  &trans
+	&trans  &kp DLLR       &kp LBRC      &kp RBRC      &kp RA(N5)     &kp CARET                                &kp EQUAL &kp N7  &kp N8  &kp N9  &kp MINUS  &kp SPACE
+	&trans  &mt LMO4 TILDE &mt LMO3 LPAR &mt LMO2 RPAR &mt LMO1 PRCNT &kp AT                                &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp FSLH
+	&trans  &kp LS(COMMA)  &kp LBKT      &kp RBKT      &kp LS(DOT)    &none      &trans &trans   &trans &trans &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0     &kp COMMA
+	                                     &trans        &trans         &trans     &trans &trans   &trans &trans &trans    &trans  &trans
 			>;
 		};
 
@@ -154,6 +166,20 @@
 	&bt BT_SEL 1 &kp LMO4     &kp LMO3     &kp LMO2     &kp LMO1         &kp C_PREV                                       &kp F11 &kp F4 &kp F5 &kp F6 &rgb_ug RGB_HUI &rgb_ug RGB_BRI
 	&bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp PSCRN    &kp INS          &out OUT_TOG &trans &trans       &trans   &trans &kp F10 &kp F1 &kp F2 &kp F3 &rgb_ug RGB_HUD &rgb_ug RGB_BRD
 	                                       &trans       &trans           &trans       &trans &bt BT_CLR   &kp CAPS &trans &trans  &trans &trans
+			>;
+		};
+
+		onehand_layer {
+			//	---------------------------------------------------------------------------------------------------------------------------------
+			//	| ??? | Q   | W   | E   | R   | T   |                             | Y   | U   | I   | O   | P   | ??? |
+			//	| ??? | A   | S   | D   | F   | G   |                             | H   | J   | K   | L   | ;   | ??? |
+			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
+			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
+			bindings = <
+	&kp ESC     &dk Q RA(Q) &dk W O   &dk E I     &dk R U  &dk T Y                                                 &dk Y T  &dk U R  &dk I E     &dk O W   &dk P Q    &kp RA(Q)
+	&kp BSPC    &dk A RA(P) &dk S L   &dk D L     &dk F J  &dk G H                                                 &dk H G  &dk J F  &dk K D     &dk L S   &dk SEMI A &kp RA(P)
+	&kp LSHFT   &dk Z FSLH  &dk X DOT &dk C COMMA &dk V M  &dk B N  &none     &none     &none        &none         &dk N B  &dk M V  &dk COMMA C &dk DOT X &dk FSLH Z &kp RSHIFT
+	                                  &to DEF     &to DEF  &mo SYM  &kp SPACE &kp RET   &mt LALT RET &lt SYM SPACE &mo NUM  &to DEF  &to DEF
 			>;
 		};
 	};
