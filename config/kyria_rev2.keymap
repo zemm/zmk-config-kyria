@@ -55,6 +55,16 @@
 
 / {
 	behaviors {
+		dk: double-key {
+			compatible = "zmk,behavior-hold-tap";
+			label = "DOUBLE_KEY";
+			binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <100>;
+			quick-tap-ms = <70>;
+			#global-quick-tap;
+			bindings = <&kp>, <&kp>;
+		};
 	};
 
 //	---------------------------------------------------------------------------------------------------------------------------------
