@@ -71,15 +71,15 @@
 		COMBO_ALL(enter, &kp ENTER, 37 38);
 		COMBO_ALL(bspc, &kp BSPC, 13 14);
 
-		COMBO_LAYER0(lctrl, &kp LCTRL, 27 28);
-		COMBO_LAYER0(lalt, &kp LALT, 26 28);
-		COMBO_LAYER0(lgui, &kp LGUI, 25 28);
-		COMBO_LAYER0(rctrl, &kp RCTRL, 35 36);
-		COMBO_LAYER0(rlalt, &kp LALT, 35 37);
-		COMBO_LAYER0(rgui, &kp RGUI, 35 38);
+		//COMBO_LAYER0(lctrl, &sk LCTRL, 27 28);
+		COMBO_LAYER0(lalt, &sk LALT, 26 28);
+		COMBO_LAYER0(lgui, &sk LGUI, 25 28);
+		//COMBO_LAYER0(rctrl, &sk RCTRL, 35 36);
+		COMBO_LAYER0(rlalt, &sk LALT, 35 37);
+		COMBO_LAYER0(rgui, &sk RGUI, 35 38);
 
-		COMBO_LAYER0(caps_word, &caps_word, 25 28);
-		COMBO_LAYER0(caps_word, &caps_word, 35 38);
+		COMBO_LAYER0(caps_word, &caps_word, 27 28);
+		COMBO_LAYER0(caps_word, &caps_word, 37 38);
 	};
 
 	keymap {
