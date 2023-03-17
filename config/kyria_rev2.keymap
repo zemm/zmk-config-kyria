@@ -84,7 +84,7 @@
 		COMBO_ALL(l_ctrl_tab, &kp LC(TAB), 44 0);
 		COMBO_ALL(l_ctrl_shift_tab, &kp LC(LC(TAB)), 44 12);
 
-		COMBO_ALL(l_one, &tog ONE, 43 44);
+		COMBO_ALL(l_one, &to ONE, 43 44);
 
 		//COMBO_LAYER0(lctrl, &sk LCTRL, 27 28);
 		COMBO_LAYER0(lalt, &sk LALT, 26 28);
@@ -176,10 +176,10 @@
 			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
 			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
-	&kp ESC     &dk Q RA(Q) &dk W O   &dk E I     &dk R U  &dk T Y                                                &dk Y T  &dk U R  &dk I E     &dk O W   &dk P Q    &kp RA(Q)
-	&kp BSPC    &dk A RA(P) &dk S L   &dk D L     &dk F J  &dk G H                                                &dk H G  &dk J F  &dk K D     &dk L S   &dk SEMI A &kp RA(P)
-	&kp LSHFT   &dk Z FSLH  &dk X DOT &dk C COMMA &dk V M  &dk B N  &none   &none      &none        &none         &dk N B  &dk M V  &dk COMMA C &dk DOT X &dk FSLH Z &kp RSHIFT
-	                                  &mo FUN     &mo FUN  &mo SYM  &mo NAV &kp LCTRL  &mt LALT RET &lt SYM SPACE &mo NUM  &mo NAV  &mo FUN
+	&kp ESC     &dk Q RA(Q) &dk W O   &dk E I     &dk R U  &dk T Y                                                 &dk Y T  &dk U R  &dk I E     &dk O W   &dk P Q    &kp RA(Q)
+	&kp BSPC    &dk A RA(P) &dk S L   &dk D L     &dk F J  &dk G H                                                 &dk H G  &dk J F  &dk K D     &dk L S   &dk SEMI A &kp RA(P)
+	&kp LSHFT   &dk Z FSLH  &dk X DOT &dk C COMMA &dk V M  &dk B N  &none     &none     &none        &none         &dk N B  &dk M V  &dk COMMA C &dk DOT X &dk FSLH Z &kp RSHIFT
+	                                  &to DEF     &to DEF  &mo SYM  &kp SPACE &kp RET   &mt LALT RET &lt SYM SPACE &mo NUM  &to DEF  &to DEF
 			>;
 		};
 	};
