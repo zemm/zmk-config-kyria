@@ -119,15 +119,15 @@
 
 		number_layer {
 			//	---------------------------------------------------------------------------------------------------------------------------------
-			//	|     | ^   | $   | {   | }   | €   |                             | =   | 7   | 8   | 9   | 0   | /s  |
-			//	|     | ~ X | # X | ( X | ) X | %   |                             | -   | 4   | 5   | 6   | +   | /   |
-			//	|     | <   | >   | [   | ]   |     | --- | --- |     | --- | --- | *   | 1   | 2   | 3   | .   | ,   |
+			//	|     | ^   | $   | {   | }   | €   |                             | =   | 7   | 8   | 9   | -   | /s  |
+			//	|     | ~ X | # X | ( X | ) X | %   |                             | *   | 4   | 5   | 6   | +   | /   |
+			//	|     | <   | >   | [   | ]   |     | --- | --- |     | --- | --- | .   | 1   | 2   | 3   | 0   | ,   |
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&trans  &kp CARET      &kp DLLR      &kp LBRC      &kp RBRC      &kp RA(N5)                                 &kp EQUAL &kp N7  &kp N8  &kp N9  &kp N0   &kp SPACE
-	&trans  &mt LMO4 TILDE &mt LMO3 HASH &mt LMO2 LPAR &mt LMO1 RPAR &kp PRCNT                                  &kp MINUS &kp N4  &kp N5  &kp N6  &kp PLUS &kp FSLH
-	&trans  &kp LS(COMMA)  &kp LS(DOT)   &kp LBKT      &kp RBKT      &none      &trans &trans    &trans  &trans &kp STAR  &kp N1  &kp N2  &kp N3  &kp DOT  &kp COMMA
-	                                     &trans        &trans        &trans     &trans &trans    &trans  &trans &trans    &trans  &trans
+	&trans  &kp CARET      &kp DLLR      &kp LBRC      &kp RBRC      &kp RA(N5)                                &kp EQUAL &kp N7  &kp N8  &kp N9  &kp MINUS  &kp SPACE
+	&trans  &mt LMO4 TILDE &mt LMO3 HASH &mt LMO2 LPAR &mt LMO1 RPAR &kp PRCNT                                 &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp FSLH
+	&trans  &kp LS(COMMA)  &kp LS(DOT)   &kp LBKT      &kp RBKT      &none      &trans &trans    &trans &trans &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0     &kp COMMA
+	                                     &trans        &trans        &trans     &trans &trans    &trans &trans &trans    &trans  &trans
 			>;
 		};
 
