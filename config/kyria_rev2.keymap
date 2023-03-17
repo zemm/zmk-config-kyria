@@ -127,10 +127,10 @@
 			//	|     | <   | [   | ]   | >   |     | --- | --- |     | --- | --- | .   | 1   | 2   | 3   | 0   | ,   |
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                                   &kp Y    &kp U    &kp I     &kp O    &kp P     &kp RA(Q)
-	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                                   &kp H    &kp J    &kp K     &kp L    &kp SEMI  &kp RA(P)
-	&kp LSHFT   &kp Z  &kp X  &kp C   &kp V    &kp B    &none    &none      &none        &none         &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RSHIFT
-	                          &mo FUN &mo FUN  &mo SYM  &mo NAV  &kp LCTRL  &mt LALT RET &lt SYM SPACE &mo NUM  &mo NAV  &mo FUN
+	&trans  &kp DLLR       &kp LBRC      &kp RBRC      &kp RA(N5)  &kp CARET                                &kp EQUAL &kp N7  &kp N8  &kp N9  &kp MINUS  &kp SPACE
+	&trans  &mt LMO4 TILDE &mt LMO3 LPAR &mt LMO2 RPAR &mt LMO1 AT &kp PRCNT                                &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp FSLH
+	&trans  &kp LS(COMMA)  &kp LBKT      &kp RBKT      &kp LS(DOT) &none      &trans &trans   &trans &trans &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0     &kp COMMA
+	                                     &trans        &trans      &trans     &trans &trans   &trans &trans &trans    &trans  &trans
 			>;
 		};
 
