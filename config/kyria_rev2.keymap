@@ -59,7 +59,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "DOUBLE_KEY";
 			#binding-cells = <2>;
-			flavor = "tap-preferred";
+			flavor = "hold-preferred";
 			tapping-term-ms = <100>;
 			quick-tap-ms = <70>;
 			#global-quick-tap;
@@ -84,7 +84,7 @@
 		COMBO_ALL(l_ctrl_tab, &kp LC(TAB), 44 0);
 		COMBO_ALL(l_ctrl_shift_tab, &kp LC(LC(TAB)), 44 12);
 
-		COMBO_ALL(l_one, &to ONE, 43 44);
+		COMBO_ALL(l_one, &tog ONE, 43 44);
 
 		//COMBO_LAYER0(lctrl, &sk LCTRL, 27 28);
 		COMBO_LAYER0(lalt, &sk LALT, 26 28);
