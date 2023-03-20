@@ -117,8 +117,8 @@
 			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
 			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
-	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                                   &kp Y    &kp U    &kp I     &kp O    &kp P     &kp RA(Q)
-	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                                   &kp H    &kp J    &kp K     &kp L    &kp SEMI  &kp RA(P)
+	&kp ESC     &kp Q  &kp W  &kp E   &kp R    &kp T                                                   &kp Y    &kp U    &kp I     &kp O    &kp P     &kp RA(P)
+	&kp BSPC    &kp A  &kp S  &kp D   &kp F    &kp G                                                   &kp H    &kp J    &kp K     &kp L    &kp SEMI  &kp RA(Q)
 	&kp LSHFT   &kp Z  &kp X  &kp C   &kp V    &kp B    &none    &none      &none        &none         &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH  &kp RSHIFT
 	                          &mo FUN &mo FUN  &mo NUM  &mo NAV  &kp LCTRL  &mt LALT RET &lt NUM SPACE &mo SYM  &mo NAV  &tog NUM
 			>;
@@ -177,8 +177,8 @@
 //			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
 //			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 //			bindings = <
-//	&kp ESC     &dk Q RA(Q) &dk W O   &dk E I     &dk R U  &dk T Y                                                 &dk Y T  &dk U R  &dk I E     &dk O W   &dk P Q    &kp RA(Q)
-//	&kp BSPC    &dk A RA(P) &dk S L   &dk D L     &dk F J  &dk G H                                                 &dk H G  &dk J F  &dk K D     &dk L S   &dk SEMI A &kp RA(P)
+//	&kp ESC     &dk Q RA(Q) &dk W O   &dk E I     &dk R U  &dk T Y                                                 &dk Y T  &dk U R  &dk I E     &dk O W   &dk P Q    &kp RA(P)
+//	&kp BSPC    &dk A RA(P) &dk S L   &dk D L     &dk F J  &dk G H                                                 &dk H G  &dk J F  &dk K D     &dk L S   &dk SEMI A &kp RA(Q)
 //	&kp LSHFT   &dk Z FSLH  &dk X DOT &dk C COMMA &dk V M  &dk B N  &none         &none     &none        &none         &dk N B  &dk M V  &dk COMMA C &dk DOT X &dk FSLH Z &kp RSHIFT
 //	                                  &to DEF     &to DEF  &mo SYM  &lt ON2 SPACE &kp RET   &mt LALT RET &lt SYM SPACE &mo NUM  &to DEF  &to DEF
 //			>;
@@ -191,8 +191,8 @@
 			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
 			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
-	&kp ESC   &kp Q  &kp W  &kp E   &kp R   &kp T                                                         &kp Y   &kp U   &kp I     &kp O   &kp P    &kp RA(Q)
-	&kp BSPC  &kp A  &kp S  &kp D   &kp F   &kp G                                                         &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp RA(P)
+	&kp ESC   &kp Q  &kp W  &kp E   &kp R   &kp T                                                         &kp Y   &kp U   &kp I     &kp O   &kp P    &kp RA(P)
+	&kp BSPC  &kp A  &kp S  &kp D   &kp F   &kp G                                                         &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp RA(Q)
 	&kp LSHFT &kp Z  &kp X  &kp C   &kp V   &kp B   &none         &none         &none       &none         &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
 	                        &to DEF &to DEF &mo SYM &lt ON2 SPACE &lt NUM RET   &lt NUM RET &lt ON2 SPACE &mo NUM &to DEF &to DEF
 			>;
@@ -200,8 +200,8 @@
 
 		onehand_layer_2 {
 			bindings = <
-	&kp ESC   &kp RA(Q) &kp O   &kp I     &kp U  &kp Y                                &kp T  &kp R  &kp E  &kp W  &kp Q  &kp RA(Q)
-	&kp BSPC  &kp RA(P) &kp L   &kp L     &kp J  &kp H                                &kp G  &kp F  &kp D  &kp S  &kp A  &kp RA(P)
+	&kp ESC   &kp RA(P) &kp O   &kp I     &kp U  &kp Y                                &kp T  &kp R  &kp E  &kp W  &kp Q  &kp RA(P)
+	&kp BSPC  &kp RA(Q) &kp L   &kp L     &kp J  &kp H                                &kp G  &kp F  &kp D  &kp S  &kp A  &kp RA(Q)
 	&kp LSHFT &kp FSLH  &kp DOT &kp COMMA &kp M  &kp N  &none  &none    &none  &none  &kp B  &kp V  &kp C  &kp X  &kp Z  &kp RSHIFT
 	                            &trans    &trans &trans &trans &trans   &trans &trans &trans &trans &trans
 			>;
