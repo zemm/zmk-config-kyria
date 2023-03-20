@@ -16,6 +16,7 @@
 #define SYM 3
 #define FUN 4
 #define ONE 5
+#define ON2 6
 
 #define X_UNDO LC(Z)
 #define X_REDO LC(LS(Z))
@@ -169,6 +170,20 @@
 			>;
 		};
 
+//		onehand_layer {
+//			//	---------------------------------------------------------------------------------------------------------------------------------
+//			//	| ??? | Q   | W   | E   | R   | T   |                             | Y   | U   | I   | O   | P   | ??? |
+//			//	| ??? | A   | S   | D   | F   | G   |                             | H   | J   | K   | L   | ;   | ??? |
+//			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
+//			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
+//			bindings = <
+//	&kp ESC     &dk Q RA(Q) &dk W O   &dk E I     &dk R U  &dk T Y                                                 &dk Y T  &dk U R  &dk I E     &dk O W   &dk P Q    &kp RA(Q)
+//	&kp BSPC    &dk A RA(P) &dk S L   &dk D L     &dk F J  &dk G H                                                 &dk H G  &dk J F  &dk K D     &dk L S   &dk SEMI A &kp RA(P)
+//	&kp LSHFT   &dk Z FSLH  &dk X DOT &dk C COMMA &dk V M  &dk B N  &none         &none     &none        &none         &dk N B  &dk M V  &dk COMMA C &dk DOT X &dk FSLH Z &kp RSHIFT
+//	                                  &to DEF     &to DEF  &mo SYM  &lt ON2 SPACE &kp RET   &mt LALT RET &lt SYM SPACE &mo NUM  &to DEF  &to DEF
+//			>;
+//		};
+
 		onehand_layer {
 			//	---------------------------------------------------------------------------------------------------------------------------------
 			//	| ??? | Q   | W   | E   | R   | T   |                             | Y   | U   | I   | O   | P   | ??? |
@@ -176,10 +191,19 @@
 			//	| ??? | Z   | X   | C   | V   | B   | ??? | ??? |     | ??? | ??? | N   | M   | ,   | .   | /   | ??? |
 			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
-	&kp ESC     &dk Q RA(Q) &dk W O   &dk E I     &dk R U  &dk T Y                                                 &dk Y T  &dk U R  &dk I E     &dk O W   &dk P Q    &kp RA(Q)
-	&kp BSPC    &dk A RA(P) &dk S L   &dk D L     &dk F J  &dk G H                                                 &dk H G  &dk J F  &dk K D     &dk L S   &dk SEMI A &kp RA(P)
-	&kp LSHFT   &dk Z FSLH  &dk X DOT &dk C COMMA &dk V M  &dk B N  &none     &none     &none        &none         &dk N B  &dk M V  &dk COMMA C &dk DOT X &dk FSLH Z &kp RSHIFT
-	                                  &to DEF     &to DEF  &mo SYM  &kp SPACE &kp RET   &mt LALT RET &lt SYM SPACE &mo NUM  &to DEF  &to DEF
+	&kp ESC   &kp Q  &kp W  &kp E   &kp R   &kp T                                                         &kp Y   &kp U   &kp I     &kp O   &kp P    &kp RA(Q)
+	&kp BSPC  &kp A  &kp S  &kp D   &kp F   &kp G                                                         &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp RA(P)
+	&kp LSHFT &kp Z  &kp X  &kp C   &kp V   &kp B   &none         &none         &none       &none         &kp N   &kp M   &kp COMMA &kp DOT &kp FSLH &kp RSHIFT
+	                        &to DEF &to DEF &mo SYM &lt ON2 SPACE &lt NUM RET   &lt NUM RET &lt ON2 SPACE &mo NUM &to DEF &to DEF
+			>;
+		};
+
+		onehand_layer_2 {
+			bindings = <
+	&kp ESC   &kp RA(Q) &kp O   &kp I     &kp U  &kp Y                                &kp T  &kp R  &kp E  &kp W  &kp Q  &kp RA(Q)
+	&kp BSPC  &kp RA(P) &kp L   &kp L     &kp J  &kp H                                &kp G  &kp F  &kp D  &kp S  &kp A  &kp RA(P)
+	&kp LSHFT &kp FSLH  &kp DOT &kp COMMA &kp M  &kp N  &none  &none    &none  &none  &kp B  &kp V  &kp C  &kp X  &kp Z  &kp RSHIFT
+	                            &trans    &trans &trans &trans &trans   &trans &trans &trans &trans &trans
 			>;
 		};
 	};
