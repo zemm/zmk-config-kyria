@@ -128,7 +128,7 @@
 			bindings = <
 	&kp TAB  &kp LC(LS(Z)) &sk RALT  &kp LS(TAB) &none     &kp SPACE                               &kp F4   &kp PG_UP &kp UP   &kp PG_DN &none &kp TAB
 	&trans   &sk LMO4      &sk LMO3  &sk LMO2    &sk LMO1  &kp DEL                                 &kp BSPC &kp LEFT  &kp DOWN &kp RIGHT &none &kp DEL
-	&LS(TAB) &kp LC(Z)     &sk LC(X) &kp LC(C)   &kp LC(V) &kp ENTER &trans &trans   &trans &trans &kp F2   &kp HOME  &none    &kp END   &none &trans
+	&LS(TAB) &kp LC(Z)     &kp LC(X) &kp LC(C)   &kp LC(V) &kp ENTER &trans &trans   &trans &trans &kp F2   &kp HOME  &none    &kp END   &none &trans
 	                                 &kp X       &kp Y     &kp Z     &trans &trans   &trans &trans &kp A    &kp B     &kp C
 			>;
 		};
