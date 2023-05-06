@@ -135,14 +135,14 @@
 
 		number_layer {
 			//	---------------------------------------------------------------------------------------------------------------------------------
-			//	|     | $   | {   | }   | €   | ^   |                             | =   | 7   | 8   | 9   | -   | /s  |
-			//	|     | ~ X | ( X | ) X | % X | @   |                             | *   | 4   | 5   | 6   | +   | /   |
-			//	|     | <   | [   | ]   | >   |     | --- | --- |     | --- | --- | .   | 1   | 2   | 3   | 0   | ,   |
+			//	|     | $   | {   | }   | €   | ^   |                             | -   | 7   | 8   | 9   | +   | /s  |
+			//	|     | ~ X | ( X | ) X | % X | @   |                             | =   | 4   | 5   | 6   | 0   | .   |
+			//	|     | <   | [   | ]   | >   |     | --- | --- |     | --- | --- | *   | 1   | 2   | 3   | /   | ,   |
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&trans  &kp DLLR       &kp LBRC      &kp RBRC      &kp RA(N5)     &kp CARET                                &kp EQUAL &kp N7  &kp N8  &kp N9  &kp MINUS  &kp SPACE
-	&trans  &mt LMO4 TILDE &mt LMO3 LPAR &mt LMO2 RPAR &mt LMO1 PRCNT &kp AT                                   &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp FSLH
-	&trans  &kp LS(COMMA)  &kp LBKT      &kp RBKT      &kp LS(DOT)    &none      &trans &trans   &trans &trans &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0     &kp COMMA
+	&trans  &kp DLLR       &kp LBRC      &kp RBRC      &kp RA(N5)     &kp CARET                                &kp PLUS  &kp N7  &kp N8  &kp N9  &kp MINUS &kp SPACE
+	&trans  &mt LMO4 TILDE &mt LMO3 LPAR &mt LMO2 RPAR &mt LMO1 PRCNT &kp AT                                   &kp EQUAL &kp N4  &kp N5  &kp N6  &kp N0    &kp DOT
+	&trans  &kp LS(COMMA)  &kp LBKT      &kp RBKT      &kp LS(DOT)    &none      &trans &trans   &trans &trans &kp STAR  &kp N1  &kp N2  &kp N3  &kp FSLH  &kp COMMA
 	                                     &trans        &trans         &trans     &trans &trans   &trans &trans &trans    &trans  &trans
 			>;
 		};
@@ -155,8 +155,8 @@
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
 	&trans  &kp DLLR  &kp LBRC  &kp RBRC  &kp RA(N5) &kp CARET                                &kp EQUAL &kp QMARK &kp AMPS      &kp UNDER   &kp MINUS &kp SPACE
-	&trans  &kp TILDE &kp LPAR  &kp RPAR  &kp PRCNT  &kp AT                                   &kp STAR  &kp PIPE  &kp QMARK     &kp DQT     &kp SQT   &none
-	&trans  &kp BSLH  &kp LBKT  &kp RBKT  &kp GRAVE  &none      &trans &trans   &trans &trans &kp HASH  &kp EXCL  &kp LS(COMMA) &kp LS(DOT) &kp FSLH  &trans
+	&trans  &kp TILDE &kp LPAR  &kp RPAR  &kp PRCNT  &kp AT                                   &kp HASH  &kp PIPE  &kp QMARK     &kp DQT     &kp SQT   &none
+	&trans  &kp BSLH  &kp LBKT  &kp RBKT  &kp GRAVE  &none      &trans &trans   &trans &trans &kp STAR  &kp EXCL  &kp LS(COMMA) &kp LS(DOT) &kp FSLH  &trans
 	                            &trans    &trans     &trans     &trans &trans   &trans &trans &trans    &trans    &trans
 			>;
 		};
