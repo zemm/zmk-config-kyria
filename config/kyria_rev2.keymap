@@ -94,8 +94,8 @@
 		COMBO_LAYER0(rlalt, &sk LALT, 35 37);
 		COMBO_LAYER0(rgui, &sk RGUI, 35 38);
 
-		COMBO_LAYER0(caps_word, &caps_word, 27 28);
-		COMBO_LAYER0(caps_word, &caps_word, 37 38);
+		COMBO_LAYER0(caps_word_l, &caps_word, 27 28);
+		COMBO_LAYER0(caps_word_r, &caps_word, 37 38);
 	};
 
 	conditional_layers {
