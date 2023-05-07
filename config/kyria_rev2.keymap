@@ -26,15 +26,14 @@
 
 
 // Modifiers for left/right side fingers: 4=little 3=ring 2=middle 1=index
-#define LMO4 LGUI
-#define LMO3 LALT
-#define LMO2 LSHFT
-#define LMO1 LCTRL
-
-#define RMO1 RCTRL
-#define RMO2 RSHFT
-#define RMO3 LALT
-#define RMO4 RGUI
+#define LMOD1 LGUI
+#define LMOD2 LALT
+#define LMOD3 LSHFT
+#define LMOD4 LCTRL
+#define RMOD4 RCTRL
+#define RMOD3 RSHFT
+#define RMOD2 LALT
+#define RMOD1 RGUI
 
 #define KP_MULT KP_MULTIPLY
 #define KP_DIV KP_DIVIDE
@@ -126,10 +125,10 @@
 
 		navigation_layer {
 			bindings = <
-	&trans  &none    &kp LCTRL &kp LS(TAB) &kp TAB   &none                                     &kp BSPC  &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL    &kp TAB
-	&trans  &sk LMO4 &sk LMO3  &sk LMO2    &sk LMO1  &kp DEL                                   &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END    &kp SPACE
-	&trans  &none    &sk RALT  &kp LEFT    &kp RIGHT &kp X_PASTE &trans &trans   &trans &trans &kp INS   &kp UP     &kp DOWN  &sk RALT   &sk RCTRL  &trans
-	                           &trans      &trans    &trans      &trans &trans   &trans &trans &trans    &trans     &trans
+	&trans  &none     &kp LCTRL &kp LS(TAB) &kp TAB   &none                                     &kp BSPC  &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL    &kp TAB
+	&trans  &sk LMOD1 &sk LMOD2 &sk LMOD3   &sk LMOD4 &kp DEL                                   &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END    &kp SPACE
+	&trans  &none     &sk RALT  &kp LEFT    &kp RIGHT &kp X_PASTE &trans &trans   &trans &trans &kp INS   &kp UP     &kp DOWN  &sk RALT   &sk RCTRL  &trans
+	                            &trans      &trans    &trans      &trans &trans   &trans &trans &trans    &trans     &trans
 			>;
 		};
 
@@ -140,10 +139,10 @@
 			//	|     | <   | [   | ]   | >   |     | --- | --- |     | --- | --- | *   | 1   | 2   | 3   | /   | ,   |
 			//	                  | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&trans  &kp DLLR       &kp LBRC      &kp RBRC      &kp RA(N5)     &kp CARET                                &kp PLUS  &kp N7  &kp N8  &kp N9  &kp MINUS &kp SPACE
-	&trans  &mt LMO4 TILDE &mt LMO3 LPAR &mt LMO2 RPAR &mt LMO1 PRCNT &kp AT                                   &kp EQUAL &kp N4  &kp N5  &kp N6  &kp N0    &kp DOT
-	&trans  &kp LS(COMMA)  &kp LBKT      &kp RBKT      &kp LS(DOT)    &none      &trans &trans   &trans &trans &kp STAR  &kp N1  &kp N2  &kp N3  &kp FSLH  &kp COMMA
-	                                     &trans        &trans         &trans     &trans &trans   &trans &trans &trans    &trans  &trans
+	&trans  &kp DLLR        &kp LBRC       &kp RBRC       &kp RA(N5)      &kp CARET                                &kp PLUS  &kp N7  &kp N8  &kp N9  &kp MINUS &kp SPACE
+	&trans  &mt LMOD1 TILDE &mt LMOD2 LPAR &mt LMOD3 RPAR &mt LMOD4 PRCNT &kp AT                                   &kp EQUAL &kp N4  &kp N5  &kp N6  &kp N0    &kp DOT
+	&trans  &kp LS(COMMA)   &kp LBKT       &kp RBKT       &kp LS(DOT)     &none      &trans &trans   &trans &trans &kp STAR  &kp N1  &kp N2  &kp N3  &kp FSLH  &kp COMMA
+	                                       &trans        &trans         &trans     &trans &trans   &trans &trans &trans    &trans  &trans
 			>;
 		};
 
@@ -164,7 +163,7 @@
 		function_layer {
 			bindings = <
 	&bt BT_SEL 0 &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp C_PLAY_PAUSE &kp C_NEXT                                       &kp F12 &kp F7 &kp F8 &kp F9 &rgb_ug RGB_EFF &rgb_ug RGB_TOG
-	&bt BT_SEL 1 &kp LMO4     &kp LMO3     &kp LMO2     &kp LMO1         &kp C_PREV                                       &kp F11 &kp F4 &kp F5 &kp F6 &rgb_ug RGB_HUI &rgb_ug RGB_BRI
+	&bt BT_SEL 1 &kp LMOD1    &kp LMOD2    &kp LMOD3    &kp LMOD4         &kp C_PREV                                       &kp F11 &kp F4 &kp F5 &kp F6 &rgb_ug RGB_HUI &rgb_ug RGB_BRI
 	&bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp PSCRN    &kp INS          &out OUT_TOG &trans &trans       &trans   &trans &kp F10 &kp F1 &kp F2 &kp F3 &rgb_ug RGB_HUD &rgb_ug RGB_BRD
 	                                       &trans       &trans           &trans       &trans &bt BT_CLR   &kp CAPS &trans &trans  &trans &trans
 			>;
