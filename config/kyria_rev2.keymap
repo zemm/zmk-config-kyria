@@ -69,10 +69,10 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "HOMEROW_MODS";
 			#binding-cells = <2>;
-			tapping-term-ms = <150>;
-			quick_tap_ms = <125>;
-			global-quick-tap;
 			flavor = "tap-preferred";
+			tapping-term-ms = <150>;
+			quick_tap_ms = <150>;
+			global-quick-tap;
 			bindings = <&kp>, <&kp>;
 		};
 		lm: left_hand_positional_hold_tap {
@@ -147,7 +147,7 @@
 			//	                  | ??? | ??? | ??? | ??? | ??? |     | ??? | ??? | ??? | ??? | ??? |
 			bindings = <
 	&kp ESC    &kp Q     &kp W     &kp E     &kp R     &kp T                                                &kp Y     &kp U     &kp I      &kp O     &kp P        &kp RA(Q)
-	&kp BSPC   &lm LM1 A &lm LM2 S &lm LM3 D &lm LM4 F &kp G                                                &kp H     &hm RM4 J &hm RM3 K  &hm RM2 L &hm RM1 SEMI &kp SQT
+	&kp BSPC   &hm LM1 A &hm LM2 S &hm LM3 D &hm LM4 F &kp G                                                &kp H     &hm RM4 J &hm RM3 K  &hm RM2 L &hm RM1 SEMI &kp SQT
 	&kp LSHFT  &kp Z     &kp X     &kp C     &kp V     &kp B    &kp LALT &kp TAB     &kp PG_UP    &kp PG_DN &kp N     &kp M     &kp COMMA  &kp DOT   &kp FSLH     &mt RSHFT RA(P)
 	                               &kp X     &kp Y     &mo NAV  &mo NUM  &mo FUN     &mt LALT RET &mo NAV   &kp SPACE &mo SYM   &kp Z
 			>;
