@@ -72,7 +72,6 @@
 			flavor = "tap-preferred";
 			tapping-term-ms = <150>;
 			quick_tap_ms = <150>;
-			global-quick-tap;
 			bindings = <&kp>, <&kp>;
 		};
 		lm: left_hand_positional_hold_tap {
